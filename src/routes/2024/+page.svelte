@@ -16,27 +16,29 @@
 	{#each data.modules_slides as { name, id, html } (id)}
 		<DeadlinedSlides {html} {name} {id} />
 	{/each}
+	<Slide>
+		{@html data.missing_modules_slide}
+	</Slide>
+	<section>
+		<Slide>
+			<p>Espero haber despertado su curiosidad y</p>
+			<p>que se animen a explorar la std lib de python</p>
+		</Slide>
+		<Slide animate>
+			<p>O al menos se tomen un momento antes de buscar una libreria</p>
+			<p class="text-transparent">
+				<i>que vaya a saber dios como funciona...</i>
+			</p>
+		</Slide>
+		<Slide animate>
+			<p>O al menos se tomen un momento antes de buscar una libreria</p>
+			<p class="text-inherit">
+				<i>que vaya a saber dios como funciona...</i>
+			</p>
+		</Slide>
+	</section>
 	<Me />
 	<Slide>
-		<p>
-			Espero haber despertado su curiosidad y<br />que se animen a explorar la std lib de python
-		</p>
-	</Slide>
-  <section>
-    <Slide animate>
-      <p>O al menos se tomen un momento antes de buscar una libreria</p>
-      <p class="text-transparent">
-        <i>que vaya a saber dios como funciona...</i>
-      </p>
-    </Slide>
-    <Slide animate>
-      <p>O al menos se tomen un momento antes de buscar una libreria</p>
-      <p class="text-inherit">
-        <i>que vaya a saber dios como funciona...</i>
-      </p>
-    </Slide>
-  </section>
-  <Slide>
 		<h2 class="text-8xl font-black">
 			<Color>Gracias por el espacio</Color>
 		</h2>

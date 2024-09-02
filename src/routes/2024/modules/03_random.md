@@ -1,4 +1,4 @@
-```python
+```py
 import random
 ```
 
@@ -26,7 +26,7 @@ Semilla: Valor inicial para el algoritmo. Garantiza reproducibilidad.
 
 ---
 
-```python
+```py
 import random
 
 super_magico = random.randint(1, 100) # 1 <= super_magico <= 100
@@ -42,7 +42,7 @@ Porque no elegir un valor de una secuencia?
 
 ---
 
-```python
+```py
 import random
 
 cantantes = ['Roman el Original', 'YSY A', 'Billie Eilish', 'El Pity Alvarez', 'Matias Fisher']
@@ -70,7 +70,7 @@ Son funciones que aumenten/decrecen la probabilidad de que salgan ciertos valore
 
 Por ejemplo la distribucion Pareto
 
-```python
+```py
 import random
 
 alpha = 1.0

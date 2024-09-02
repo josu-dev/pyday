@@ -1,4 +1,5 @@
 import { parse_markdown } from '$lib/utils';
+import { } from './modules/metadata';
 
 export async function load() {
     const modules: Record<string, string> = import.meta.glob('./modules/*.md', {
@@ -14,9 +15,15 @@ export async function load() {
             name: key.slice(key.lastIndexOf('/') + 4, key.length - 3),
             id: key,
             source: modules[key],
-            html: parse_markdown(modules[key])
+            html: await parse_markdown(modules[key])
         });
     }
 
-    return { modules_slides: modules_slides };
+    const missing_modules_slide = await parse_markdown(
+        import.meta.glob(
+            './slides/missing_modules.md',
+            { eager: true, query: '?raw', import: 'default' }
+        )['./slides/missing_modules.md'] as string
+    );
+    return { modules_slides: modules_slides, missing_modules_slide: missing_modules_slide };
 };

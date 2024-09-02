@@ -59,6 +59,11 @@ div:has(> pre) {
 	border-radius: var(--radius-lg);
 }
 
+a {
+    color: var(--r-link-color);
+    text-decoration: none;
+}
+
 /* view transitions */
 html {
 	view-transition-name: none;

@@ -20,12 +20,13 @@
 		<h2 class="text-4xl font-bold">Yo soy Josue</h2>
 		<div class="flex flex-col my-8 gap-4">
 			<p>Me dicen Josu</p>
-			<p>Me gusta </p>
-      <ul>
-        <li>El 🧉</li>
-        <li>🧑‍💻</li>
-        <li>Los chistes malos</li>
-      </ul>
+			<p>Me gusta</p>
+			<ul>
+				<li>El 🧉</li>
+				<li>🧑‍💻</li>
+				<li>Ayudar</li>
+				<li>Los chistes malos</li>
+			</ul>
 		</div>
 	</Slide>
 	<Slide class="h-full">

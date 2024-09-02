@@ -1,4 +1,4 @@
-```python
+```py
 import calendar
 ```
 
@@ -16,14 +16,14 @@ Literalmente dibujar calendarios, tipo almanaques pero como strings
 
 ---
 
-```python
+```py
 import calendar
 
 calendar.prmonth(2024, calendar.SEPTEMBER)
 ```
 
 ```txt
-  septiembre 2024                           
+  septiembre 2024
 lu ma mi ju vi sá do
                    1
  2  3  4  5  6  7  8
@@ -41,7 +41,7 @@ Que se puede hacer?
 
 Y por ejemplo ver cuando es el proximo viernes 13
 
-```python
+```py
 import calendar
 
 calendar.setfirstweekday(calendar.SUNDAY)
@@ -71,7 +71,7 @@ Un poco de google
 
 ---
 
-```python
+```py
 import calendar
 
 past_events = ((2023, 9, 17),(2023, 9, 9), (2024, 9, 14))

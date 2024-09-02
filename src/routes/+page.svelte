@@ -8,7 +8,7 @@
 		<h1>PyDay</h1>
 		<ol class="flex flex-col gap-4">
 			<li><a href="/2024">2023</a></li>
-			<li><a href="/2024">2024</a></li>
+			<li><a href="/2024" class="no-underline">2024</a></li>
 		</ol>
 	</Slide>
 </Presentation>

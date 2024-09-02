@@ -18,7 +18,12 @@
     height: 100%;
 }
 
-.reveal p + p {
+.reveal p {
+    max-width: min(90vw, 960px);
+    text-wrap: pretty;
+}
+
+.reveal * + p {
     margin-top: 0.75em;
 }
 

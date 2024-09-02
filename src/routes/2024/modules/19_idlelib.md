@@ -1,4 +1,4 @@
-```python
+```py
 import idlelib
 ```
 
@@ -52,11 +52,13 @@ python
 
 Sigamos con el siguiente modulo
 
-
 ---
 
 Bueno, aca hay un gif de como se ve el IDLE
 
 ---
 
-![IDLE](https://upload.wikimedia.org/wikipedia/commons/4/4f/IDLE_%28Python%29.png)
+<video controls autoplay loop muted>
+  <source src="/2024/idle_demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>

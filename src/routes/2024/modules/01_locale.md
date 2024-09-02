@@ -1,20 +1,22 @@
-```python
+```py
 import locale
 ```
+
 ---
 
 El modulo locale permite trabajar con configuraciones regionales del sistema
 
 ---
+
 En otras palabras
 
 ---
-Permite obtener y modificar la configuracion actual para adaptar la aplicacion a las preferencias del usuario
 
+Permite obtener y modificar la configuracion actual para adaptar la aplicacion a las preferencias del usuario
 
 ---
 
-```python
+```py
 import locale
 
 print(locale.getlocale())
@@ -47,7 +49,7 @@ Tambien se puede cambiar la configuracion
 
 ---
 
-```python
+```py
 import locale
 
 locale.setlocale(locale.LC_ALL, 'zu_ZA.UTF-8')
@@ -77,7 +79,7 @@ O modulos como calendar, datetime, etc
 
 Todos los ejemplos de salida son con:
 
-```python
+```py
 import locale
 
 locale.setlocale(locale.LC_ALL, 'es_AR.UTF-8')
@@ -86,6 +88,7 @@ locale.setlocale(locale.LC_ALL, 'es_AR.UTF-8')
 ---
 
 Para mas informacion:
+
 - https://docs.python.org/3/library/locale.html
 - https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
 - https://en.wikipedia.org/wiki/ISO_3166-2

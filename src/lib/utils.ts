@@ -1,65 +1,91 @@
-// `shiki/core` entry does not include any themes or languages or the wasm binary.
-import rehypeShikiFromHighlighter from '@shikijs/rehype/core';
+import rehypeShikiFromHighlighter from '@shikijs/rehype/core'; // `shiki/core` entry does not include any themes or languages or the wasm binary.
 import rehypeRaw from 'rehype-raw';
 import rehypeStringify from 'rehype-stringify';
+import remarkGfm from 'remark-gfm';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
-import { createHighlighterCore } from 'shiki/core';
+import { createHighlighterCore, type HighlighterGeneric } from 'shiki/core';
 import { unified } from 'unified';
-
-// directly import the theme and language modules, only the ones you imported will be bundled.
-import synthwave84 from 'shiki/themes/synthwave-84.mjs';
 
 const highlighter = await createHighlighterCore({
     themes: [
-        synthwave84,
+        import('shiki/themes/synthwave-84.mjs'),
+        import('shiki/themes/dark-plus.mjs'),
+        import('shiki/themes/aurora-x.mjs'),
     ],
     langs: [
         import('shiki/langs/markdown.mjs'),
         import('shiki/langs/html.mjs'),
+        import('shiki/langs/json.mjs'),
         import('shiki/langs/python.mjs'),
         import('shiki/langs/shellscript.mjs'),
     ],
     loadWasm: import('shiki/wasm')
-});
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+}) as HighlighterGeneric<any, any>;
 
 const processor = unified()
     .use(remarkParse)
+    .use(remarkGfm)
     .use(remarkRehype, {
         allowDangerousHtml: true,
     })
     .use(rehypeShikiFromHighlighter, highlighter, {
+        inline: 'tailing-curly-colon',
         defaultColor: false,
         theme: 'synthwave-84',
         colorReplacements: {
             'synthwave-84': {
                 '#262335': 'transparent',
+                '#fe4450': '#f3f8ff'
             }
         },
         onError: (err) => {
             console.error(err);
-        }
+        },
+        transformers: [
+            {
+                preprocess(_, options) {
+                    if (options.meta?.__raw) {
+                        this.meta = options.meta;
+                    }
+                },
+
+            }
+        ],
+        parseMetaString(metaString, node) {
+            if (node.tagName !== 'pre') {
+                return;
+            }
+            for (const meta of metaString.split(/\s+/)) {
+                if (meta.includes('=')) {
+                    const [key, value] = meta.split('=');
+                    return { [key]: value };
+                }
+            }
+        },
     })
     .use(rehypeRaw)
-    // an inline plugin to add a "data-noescape" attribute to code elements
-
     .use(rehypeStringify);
 
-export function parse_markdown(source: string): string {
+export async function parse_markdown(source: string): Promise<string> {
     let normalized = '';
     for (const block of source.split('\n---')) {
-        const trimmed = block.trim();
-        if (trimmed.length === 0) {
+        let safe_block = block.trim();
+        if (safe_block.length === 0) {
             continue;
         }
-
-        normalized += '<section>\n\n' + block.trim() + '\n\n</section>\n\n';
+        let start_tag = '<section>\n\n';
+        const first_newline = safe_block.indexOf('\n');
+        const first_line = safe_block.slice(0, first_newline).trim();
+        if (first_line.includes('class="') || first_line.includes('animate')) {
+            start_tag = first_line.startsWith('<') ? ('<section data-auto-animate>\n' + first_line + "\n\n") : ('<section ' + first_line + ' data-auto-animate>\n\n');
+            safe_block = safe_block.slice(first_newline + 1).trimStart();
+        }
+        normalized += start_tag + safe_block + '\n\n</section>\n\n';
     }
 
-    const code = processor.processSync(normalized).toString().replaceAll('<code>', '<code data-noescape class="nohighlight">');
+    const code = (await processor.process(normalized)).toString().replaceAll('<code', '<code data-noescape class="nohighlight"');
 
-    // if (code.includes('calendar')) {
-    //     console.log(code);
-    // }
     return code;
 }

@@ -9,6 +9,7 @@
 	type Props = {
 		children: Snippet;
 		damage?: boolean;
+		autonext?: boolean;
 	};
 
 	const stop = tweened(100, { duration: TIME_DAMAGE_PER_SLIDE, easing: cubicOut });
@@ -26,9 +27,9 @@
 		enabled: true
 	};
 
-	let { children, damage = false }: Props = $props();
+	let { children, damage = false, autonext = true }: Props = $props();
 
-  let visible = $state(false);
+	let visible = $state(false);
 
 	let timeout_id: number | undefined;
 
@@ -52,26 +53,28 @@
 	}
 
 	function start_timer() {
-		_damage.enabled = true;
+		_damage.enabled = damage;
 		time_progress.set(1);
-    visible = true;
+		visible = true;
 		timeout_id = setTimeout(() => {
 			global_opacity.set(1);
 			stop.set(0);
 			run_damage_effect();
 			timeout_id = setTimeout(() => {
-        visible = false;
-				rjs_ctx.deck?.right();
-        time_progress.set(0);
+				visible = false;
+				if (autonext) {
+					rjs_ctx.deck?.right();
+				}
+				time_progress.set(0);
 			}, TIME_DAMAGE_PER_SLIDE);
 		}, TIME_PER_SLIDE - TIME_DAMAGE_PER_SLIDE);
 	}
-  
+
 	function cancel_timer() {
-    visible = false;
+		visible = false;
 		clearTimeout(timeout_id);
 		_damage.enabled = false;
-    time_progress.set(0);
+		time_progress.set(0);
 	}
 </script>
 
@@ -84,7 +87,7 @@
 	{@render children()}
 </Slide>
 <div class="time_bar_progress">
-  <span style="transform: scaleX({$time_progress})"></span>
+	<span style="transform: scaleX({$time_progress})"></span>
 </div>
 
 <style>
@@ -102,27 +105,27 @@
 		opacity: var(--opacity);
 	}
 
-  .time_bar_progress {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: rgba(0,0,0,.2);
-    color: oklch(60.53% 0.2877 21.36);
-    
-    span {
-      display: block;
-      height: 100%;
-      width: 100%;
-      background-color: currentColor;
-      transform-origin: 0 0;
-      transform: scaleX(0);
-    }
-  }
+	.time_bar_progress {
+		position: absolute;
+		display: none;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background-color: rgba(0, 0, 0, 0.2);
+		color: oklch(60.53% 0.2877 21.36);
 
-  :global .damage-container.present + div.time_bar_progress {
-    display: block;
-  }
+		span {
+			display: block;
+			height: 100%;
+			width: 100%;
+			background-color: currentColor;
+			transform-origin: 0 0;
+			transform: scaleX(0);
+		}
+	}
+
+	:global .damage-container.present + div.time_bar_progress {
+		display: block;
+	}
 </style>
