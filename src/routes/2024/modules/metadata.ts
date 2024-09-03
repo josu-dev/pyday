@@ -2162,7 +2162,7 @@ function generate_modules_table(modules: { name: string; }[], columns: number) {
     );
 }
 
-console.log(generate_modules_table(presented_modules, 5));
+// console.log(generate_modules_table(presented_modules, 5));
 
 // const selected_letters = {
 //     a: [6, 1.8633540372670807, 2],

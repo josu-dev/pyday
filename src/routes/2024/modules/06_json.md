@@ -14,7 +14,7 @@ Esos que se ven así:
 {
   "nombre": "Guido van Rossum",
   "edad": 68,
-  "casado": "con python"
+  "casado": ["con python", "y con su esposa"]
 }
 ```
 

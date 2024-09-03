@@ -19,6 +19,7 @@ const highlighter = await createHighlighterCore({
         import('shiki/langs/json.mjs'),
         import('shiki/langs/python.mjs'),
         import('shiki/langs/shellscript.mjs'),
+        import('shiki/langs/toml.mjs'),
     ],
     loadWasm: import('shiki/wasm')
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -50,7 +51,6 @@ const processor = unified()
                         this.meta = options.meta;
                     }
                 },
-
             }
         ],
         parseMetaString(metaString, node) {
