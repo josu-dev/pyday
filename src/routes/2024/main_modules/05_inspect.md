@@ -8,17 +8,6 @@ El modulo `inspect` nos permite obtener información sobre objetos de Python, co
 
 ---
 
-Por ejemplo ver las funciones de un módulo nativo:
-
-```py
-import inspect
-import math
-
-print(*inspect.getmembers(math, inspect.isbuiltin), sep="\n")
-```
-
----
-
 Por ejemplo ver las funciones de un módulo:
 
 ```py
@@ -31,7 +20,7 @@ print("normal:", *inspect.getmembers(secrets, inspect.isfunction), sep="\n  ")
 
 ---
 
-```txt
+```plain
 nativas:
   ('compare_digest', <built-in function compare_digest>)
 normal:
@@ -43,7 +32,7 @@ normal:
 
 ---
 
-No falta la funcion `secrets.choice`?
+No falta la funcion `secrets.choice{:py}`?
 
 ---
 
@@ -56,7 +45,7 @@ print("normal:", *inspect.getmembers(secrets, inspect.ismethod), sep="\n  ")
 
 --- class="text-2xl"
 
-```txt
+```plain
 metodo:
   ('choice', <bound method Random.choice of <random.SystemRandom object at 0x000001EB6ED0BE60>>)
   ('randbits', <bound method SystemRandom.getrandbits of <random.SystemRandom object at 0x000001EB6ED0BE60>>)
@@ -74,7 +63,7 @@ print(inspect.getdoc(inspect))
 
 ---
 
-```txt
+```plain
 Generate cryptographically strong pseudo-random numbers suitable for
 managing secrets such as account authentication, tokens, and similar.
 
@@ -94,34 +83,19 @@ print(inspect.getsource(inspect.SystemRandom))
 
 --- class="text-2xl"
 
-```txt
+```plain
 class SystemRandom(Random):
     """Alternate random number generator using sources provided
     by the operating system (such as /dev/urandom on Unix or
     CryptGenRandom on Windows).
 
-     Not available on all systems (see os.urandom() for details).
-
+    Not available on all systems (see os.urandom() for details).
     """
 
     def random(self):
         """Get the next random number in the range 0.0 <= X < 1.0."""
         return (int.from_bytes(_urandom(7)) >> 3) * RECIP_BPF
-
-    def getrandbits(self, k):
-        """getrandbits(k) -> x.  Generates an int with k random bits."""
-        if k < 0:
-            raise ValueError('number of bits must be non-negative')
-        numbytes = (k + 7) // 8                       # bits / 8 and rounded up
-        x = int.from_bytes(_urandom(numbytes))
-        return x >> (numbytes * 8 - k)                # trim excess bits
-
-    def randbytes(self, n):
-        """Generate n random bytes."""
-        # os.urandom(n) fails with ValueError for n < 0
-        # and returns an empty bytes string for n == 0.
-        return _urandom(n)
-
+    ...
     def seed(self, *args, **kwds):
         "Stub method.  Not used for a system random number generator."
         return None
@@ -144,8 +118,8 @@ print(inspect.getsource(print))
 
 --- class="text-xl"
 
-```txt
-Traceback (most recent call last):
+```ansi
+[0;31mTraceback (most recent call last):
   File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 25, in <module>
     print(inspect.getsource(print))
           ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -169,8 +143,7 @@ Traceback (most recent call last):
   line 932, in getfile
     raise TypeError('module, class, method, function, traceback, frame, or '
 TypeError: module, class, method, function, traceback, frame, or code object
-was expected, got builtin_function_or_method
-
+was expected, got builtin_function_or_method[0m
 ```
 
 ---
@@ -191,7 +164,12 @@ print(signature.return_annotation)
 
 --- class="text-xl"
 
-```txt
-OrderedDict({'a': <Parameter "a">, 'b': <Parameter "b: int">, 'c': <Parameter "c: str = 'hola'">, 'kwargs': <Parameter "**kwargs">})
+```plain
+OrderedDict({
+  'a': <Parameter "a">,
+  'b': <Parameter "b: int">,
+  'c': <Parameter "c: str = 'hola'">,
+  'kwargs': <Parameter "**kwargs">
+})
 <class 'int'>
 ```

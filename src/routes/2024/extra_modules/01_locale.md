@@ -32,13 +32,13 @@ Sigue la forma de (idioma, codificacion)
 
 ---
 
-```txt
+```plain
 <codigo lenguage>_<codigo pais>.<codificacion>
 ```
 
 ---
 
-```txt
+```plain
 ('es_AR', 'UTF-8')
 Español, Argentina, UTF-8
 ```
@@ -58,14 +58,14 @@ print(locale.getlocale())
 
 ---
 
-```txt
+```plain
 ('zu_ZA', 'UTF-8')
 Zulu, South Africa, UTF-8
 ```
 
 ---
 
-De que sirve?
+De que nos sirve?
 
 ---
 

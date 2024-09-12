@@ -50,6 +50,15 @@ const processor = unified()
                     if (options.meta?.__raw) {
                         this.meta = options.meta;
                     }
+                    // fix for correct color replacement to prevent ansicolors from being affected
+                    if (options.lang === 'ansi') {
+                        // @ts-expect-error - exists 🙃
+                        delete this.options.colorReplacements['synthwave-84']['#fe4450'];
+                    }
+                    else {
+                        // @ts-expect-error - exists 🙃
+                        this.options.colorReplacements['synthwave-84']['#fe4450'] = '#f3f8ff';
+                    }
                 },
             }
         ],
@@ -60,7 +69,9 @@ const processor = unified()
             for (const meta of metaString.split(/\s+/)) {
                 if (meta.includes('=')) {
                     const [key, value] = meta.split('=');
-                    return { [key]: value };
+                    const start_index = value.startsWith('"') ? 1 : 0;
+                    const end_index = value.endsWith('"') ? -1 : undefined;
+                    return { [key]: value.slice(start_index, end_index) };
                 }
             }
         },

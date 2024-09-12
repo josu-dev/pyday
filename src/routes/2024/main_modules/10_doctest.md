@@ -33,13 +33,14 @@ if __name__ == "__main__":
 
 ---
 
-```txt
+```plain
 python mi_modulo.py
 ```
 
 ---
 
-```txt
+```plain
+
 ```
 
 --- animate
@@ -78,7 +79,7 @@ python mi_modulo.py -v
 python mi_modulo.py -v
 ```
 
-```txt
+```plain
 Trying:
     baskara(1, 0, -1)
 Expecting:
@@ -104,7 +105,7 @@ Test passed.
 
 O podemos agarrar un modulo y correr los tests
 
-```sh
+```py
 # counter.py
 """
 >>> count_letters("me leiste")
@@ -113,12 +114,10 @@ O podemos agarrar un modulo y correr los tests
 import collections
 import string
 
-
 def count_letters(text: str):
     """
     >>> count_letters("hola")
     {'h': 1, 'o': 1, 'l': 1, 'a': 1}
-
     >>> count_letters(43)
     Traceback (most recent call last):
         ...
@@ -136,7 +135,7 @@ python -m doctest counter.py
 
 ---
 
-```txt
+```plain
 **********************************************************************
 File "C:\Users\suare\projects\personal\pyday1\2024\counter.py", line 15, in counter.count_letters
 Failed example:
@@ -180,12 +179,10 @@ Falto validar que el argumento sea un string
 import collections
 import string
 
-
 def count_letters(text: str):
     """
     >>> count_letters("hola")
     {'h': 1, 'o': 1, 'l': 1, 'a': 1}
-
     >>> count_letters(43)
     Traceback (most recent call last):
         ...
@@ -207,17 +204,18 @@ python -m doctest counter.py
 ---
 
 ```sh
+
 ```
 
 --- animate
 
-`doctest{:py}` valora exactitud
+`doctest{:py}` prima la exactitud
 
 Hay casos donde no es lo que queremos, ya que el resultado esta simplificado
 
 --- animate
 
-`doctest{:py}` valora exactitud
+`doctest{:py}` prima la exactitud
 
 Hay casos donde no es lo que queremos, ya que el resultado esta simplificado
 
@@ -234,7 +232,6 @@ def numeros():
     """
     return list(range(1, 11))
 
-
 if __name__ == "__main__":
     import doctest
 
@@ -249,7 +246,8 @@ python test.py
 
 ---
 
-```txt
+```plain
+
 ```
 
 --- animate
@@ -260,13 +258,12 @@ O como modulo
 python -m doctest -o ELLIPSIS -o NORMALIZE_WHITESPACE test.py
 ```
 
----
+--- animate
 
 Tambien podemos extraer un script desde los ejemplos
 
 ```py
 import doctest
-
 
 print(doctest.script_from_examples(r"""
     Este es un ejemplo de como se puede usar doctest para probar un modulo.
@@ -283,7 +280,9 @@ print(doctest.script_from_examples(r"""
 """))
 ```
 
----
+--- animate
+
+Tambien podemos extraer un script desde los ejemplos
 
 ```py
 # Este es un ejemplo de como se puede usar doctest para probar un modulo.

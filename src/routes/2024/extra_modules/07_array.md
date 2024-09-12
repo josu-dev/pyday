@@ -26,7 +26,7 @@ print(f"Array: {sys.getsizeof(a)} bytes")
 
 ---
 
-```txt
+```plain
 List : 72 bytes
 Array: 96 bytes
 ```
@@ -52,7 +52,7 @@ print(f"Array: {sys.getsizeof(array.array('i', range(100_000)))} bytes")
 
 ---
 
-```txt
+```plain
 List : 80056 bytes
 Array: 40420 bytes
 List : 8000056 bytes
@@ -103,7 +103,7 @@ print(f"Array: {timeit.timeit(lambda: a_seq.count(14))}")
 
 ---
 
-```txt
+```plain
 List : 123.40756099999999
 Tuple: 80.49820690000342
 Array: 105.94930929999828
@@ -135,20 +135,20 @@ es el tipo de dato que se va a almacenar
 
 <div class="text-2xl mt-4">
 
-| Codigo | Tipo de C | Tipo de Python | Tamaño mínimo en bytes |
-|--------|-----------|----------------|------------------------|
-| `'b'` | signed char | int | 1 |
-| `'B'` | unsigned char | int | 1 |
-| `'u'` | wchar_t | Unicode character | 2 |
-| `'h'` | signed short | int | 2 |
-| `'H'` | unsigned short | int | 2 |
-| `'i'` | signed int | int | 2 |
-| `'I'` | unsigned int | int | 2 |
-| `'l'` | signed long | int | 4 |
-| `'L'` | unsigned long | int | 4 |
-| `'q'` | signed long long | int | 8 |
-| `'Q'` | unsigned long long | int | 8 |
-| `'f'` | float | float | 4 |
-| `'d'` | double | float | 8 |
+| Codigo | Tipo de C          | Tipo de Python    | Tamaño mínimo en bytes |
+| ------ | ------------------ | ----------------- | ---------------------- |
+| `'b'`  | signed char        | int               | 1                      |
+| `'B'`  | unsigned char      | int               | 1                      |
+| `'u'`  | wchar_t            | Unicode character | 2                      |
+| `'h'`  | signed short       | int               | 2                      |
+| `'H'`  | unsigned short     | int               | 2                      |
+| `'i'`  | signed int         | int               | 2                      |
+| `'I'`  | unsigned int       | int               | 2                      |
+| `'l'`  | signed long        | int               | 4                      |
+| `'L'`  | unsigned long      | int               | 4                      |
+| `'q'`  | signed long long   | int               | 8                      |
+| `'Q'`  | unsigned long long | int               | 8                      |
+| `'f'`  | float              | float             | 4                      |
+| `'d'`  | double             | float             | 8                      |
 
 </div>

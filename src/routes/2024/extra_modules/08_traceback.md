@@ -4,7 +4,7 @@ import traceback
 
 ---
 
-El module `traceback` provee funciones para manipular excepciones y sus trazas de pila.
+El modulo `traceback` provee funciones para manipular excepciones y sus trazas de pila.
 
 ---
 
@@ -12,7 +12,7 @@ Las exepciones son lo que ves en la terminal cuando te pones triste
 
 ---
 
-```txt
+```plain
 Traceback (most recent call last):
   File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 47, in <module>
     print(f"List time: {timeit.timeit(lambda: list_seq.count(14), number=1_000_000)}")
@@ -54,7 +54,7 @@ funcion_hiper_segura(funcion_que_puede_explotar)
 
 ---
 
-```txt
+```plain
 Traceback (most recent call last):
   File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 26, in <module>
     funcion_hiper_segura(funcion_que_puede_explotar)
@@ -94,7 +94,7 @@ afuera()
 
 ---
 
-```txt
+```plain
 C:\Users\suare\projects\personal\pyday1\2024\xd.py | 28 | <module> | afuera()
 C:\Users\suare\projects\personal\pyday1\2024\xd.py | 26 | afuera | dentro()
 C:\Users\suare\projects\personal\pyday1\2024\xd.py | 25 | dentro | afuera_fuera()
@@ -127,7 +127,7 @@ print(
 
 ---
 
-```txt
+```plain
   File "date.py", line 15, in <module>
     process_dates()
   File "date.py", line 11, in process_dates

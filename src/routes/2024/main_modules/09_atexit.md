@@ -12,20 +12,20 @@ El modulo `atexit{:py}` nos permite registrar funciones que se ejecutaran al fin
 import atexit
 
 def chau():
-    print("termine la ejecucion papu")
+    print("termine la ejecucion 👌")
 
 atexit.register(chau)
 ```
 
 ---
 
-```txt
+```plain
 termine la ejecucion papu
 ```
 
 ---
 
-Y de que nos sirve?
+De que nos sirve?
 
 ---
 
@@ -59,7 +59,7 @@ atexit.register(otra, "tercera")
 
 ---
 
-```txt
+```plain
 tercera
 segunda
 primera
@@ -86,10 +86,9 @@ desapareci = lambda name: print(f"{name} desapareci")
 
 me_quede = lambda name: print(f"{name} me_quede")
 
-atexit.register(me_quede, name="primera")
-atexit.register(desapareci, "segunda")
-atexit.register(me_quede, "tercera")
-atexit.register(desapareci, name="cuarta")
+atexit.register(desapareci, "primera")
+atexit.register(me_quede, "segunda")
+atexit.register(desapareci, name="tercera")
 atexit.unregister(desapareci)
 ```
 
@@ -102,14 +101,12 @@ desapareci = lambda name: print(f"{name} desapareci")
 
 me_quede = lambda name: print(f"{name} me_quede")
 
-atexit.register(me_quede, name="primera")
-atexit.register(desapareci, "segunda")
-atexit.register(me_quede, "tercera")
-atexit.register(desapareci, name="cuarta")
+atexit.register(desapareci, "primera")
+atexit.register(me_quede, "segunda")
+atexit.register(desapareci, name="tercera")
 atexit.unregister(desapareci)
 ```
 
-```txt
-tercera me_quede
-primera me_quede
+```plain
+segunda me_quede
 ```

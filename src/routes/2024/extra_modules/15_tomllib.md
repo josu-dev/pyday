@@ -4,7 +4,7 @@ import tomllib
 
 --- animate
 
-El module `tomllib{:py}` provee una interfaz para parsear [TOML](https://toml.io/en/)
+El modulo `tomllib{:py}` provee una interfaz para parsear [TOML](https://toml.io/en/)
 
 --- animate
 
@@ -44,7 +44,7 @@ casado = ["con Python", "y con su esposa"]
 
 --- animate
 
-```txt
+```plain
 {
   'persona': {
     'nombre': 'Guido van Rossum',
@@ -80,7 +80,7 @@ with open('settings.toml') as f:
     print(tomllib.load(f))
 ```
 
-```txt
+```plain
 Traceback (most recent call last):
   File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 23, in <module>
     print(tomllib.load(f))
@@ -92,7 +92,7 @@ TypeError: File must be opened in binary mode, e.g. use `open('foo.toml', 'rb')`
 
 --- animate
 
-```txt
+```plain
 Traceback (most recent call last):
   File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 23, in <module>
     print(tomllib.load(f))
@@ -117,7 +117,7 @@ with open('settings.toml', 'rb') as f:
 
 --- animate
 
-```txt
+```plain
 {
   'server': {
     'host': 'localhost',

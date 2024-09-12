@@ -22,7 +22,7 @@ import calendar
 calendar.prmonth(2024, calendar.SEPTEMBER)
 ```
 
-```txt
+```plain
   septiembre 2024
 lu ma mi ju vi sá do
                    1
@@ -54,7 +54,7 @@ for year in range(2024, 2029):
 
 ---
 
-```txt
+```plain
 Viernes 13 en septiembre de 2024
 Viernes 13 en diciembre de 2024
 Viernes 13 en noviembre de 2026
@@ -82,7 +82,7 @@ for year, month, day in past_events:
 
 ---
 
-```txt
+```plain
 PyDay 2023 fue un domingo
 PyDay 2023 fue un sábado
 PyDay 2024 fue un sábado

@@ -38,7 +38,7 @@ print(un_tipaso_str)
 ---
 
 ```json
-{"nombre": "Guido van Rossum", "edad": 68, "casado": "con python"}
+{ "nombre": "Guido van Rossum", "edad": 68, "casado": "con python" }
 ```
 
 ---
@@ -97,7 +97,7 @@ with open('guido.json', 'r') as f:
 
 ---
 
-```txt
+```plain
 {"nombre":"Guido van Rossum","edad":68,"casado":"con python"}
 {'nombre': 'Guido van Rossum', 'edad': 68, 'casado': 'con python'}
 ```
@@ -157,8 +157,8 @@ $ python -m json.tool --tab guido.json
 
 ```json
 {
-        "nombre": "Guido van Rossum",
-        "edad": 68,
-        "casado": "con python"
+  "nombre": "Guido van Rossum",
+  "edad": 68,
+  "casado": "con python"
 }
 ```

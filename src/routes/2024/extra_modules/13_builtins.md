@@ -56,7 +56,7 @@ def print(*args, **kwargs):
 print('Hola PyDay')
 ```
 
-```txt
+```plain
 🐍 Hola PyDay 🐍
 ```
 

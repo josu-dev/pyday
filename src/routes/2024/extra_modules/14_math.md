@@ -44,7 +44,7 @@ factorial = lambda n: math.factorial(n)
 print(factorial(5))
 ```
 
-```txt
+```plain
 120
 ```
 
@@ -102,7 +102,7 @@ print(pasos_ahorrados(4, 8))
 
 </div>
 
-```txt
+```plain
 mas o menos 446.13630114012284 pasos
 ```
 
@@ -134,7 +134,7 @@ print(math.gcd(10, 15), "maximo comun divisor")
 print(math.lcm(10, 15), "minimo comun multiplo")
 ```
 
-```txt
+```plain
 10 combinaciones
 20 permutaciones
 5 maximo comun divisor
@@ -165,7 +165,7 @@ print(0.1 + 0.2 == 0.3)
 
 Da
 
-```txt
+```plain
 False
 ```
 
@@ -193,7 +193,7 @@ print(0.1 + 0.2, 0.3)
 print(0.1 + 0.2, 0.3)
 ```
 
-```txt
+```plain
 0.30000000000000004 0.3
 ```
 
@@ -233,7 +233,7 @@ import math
 print(math.isclose(0.1 + 0.2, 0.3))
 ```
 
-```txt
+```plain
 True
 ```
 
@@ -295,6 +295,6 @@ def distancia_volando_entre(
 print(distancia_volando_en_linea_recta(buenos_aires, cordoba), "km")
 ```
 
-```txt
+```plain
 647.1898525971513 km
 ```

@@ -1,8 +1,8 @@
 import { parse_markdown } from '$lib/utils';
-import { } from './modules/metadata';
+// import {} from './metadata';
 
 export async function load() {
-    const modules: Record<string, string> = import.meta.glob('./modules/*.md', {
+    const modules: Record<string, string> = import.meta.glob('./main_modules/??_*.md', {
         eager: true,
         query: '?raw',
         import: 'default'
@@ -19,11 +19,11 @@ export async function load() {
         });
     }
 
-    const missing_modules_slide = await parse_markdown(
+    const modules_missing_slide = await parse_markdown(
         import.meta.glob(
-            './slides/missing_modules.md',
+            './main_modules/missing_modules.md',
             { eager: true, query: '?raw', import: 'default' }
-        )['./slides/missing_modules.md'] as string
+        )['./main_modules/missing_modules.md'] as string
     );
-    return { modules_slides: modules_slides, missing_modules_slide: missing_modules_slide };
+    return { modules_slides: modules_slides, modules_missing_slide: modules_missing_slide };
 };

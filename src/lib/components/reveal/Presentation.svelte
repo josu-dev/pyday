@@ -1,5 +1,4 @@
 <script lang="ts">
-	import 'reveal.js/dist/reveal.css';
 	import type { Snippet } from 'svelte';
 	import { set_rjs_ctx } from './utils';
 

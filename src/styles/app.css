@@ -23,7 +23,7 @@
 :root {
 	--r-background-color: oklch(20% 0.01 272);
 	--r-main-font: 'Manrope Variable';
-	--r-main-font-size: 42px;
+	--r-main-font-size: 40px;
 	--r-main-color: oklch(98% 0.02 272);
 	--r-heading-font: 'Manrope';
 	--r-code-font: 'JetBrains Mono Variable';

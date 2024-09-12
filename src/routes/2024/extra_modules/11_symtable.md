@@ -8,11 +8,11 @@ El módulo `symtable` permite examinar la table de simbolos de un bloque de codi
 
 --- animate
 
-Pero que es una tabla de simbolos?
+Pero, que es una tabla de simbolos?
 
 --- animate
 
-Pero que es una tabla de simbolos?
+Pero, que es una tabla de simbolos?
 
 Una tabla de simbolos es lo que permite resolver el alcance de los identificadores en un codigo
 
@@ -36,7 +36,7 @@ class Test:
     @staticmethod
     def test_c():
         enlasada()
-    
+
 ''', 'test', 'exec')
 
 print(st_childs:=st.get_children())
@@ -45,7 +45,7 @@ print(st_childs[2].get_methods())
 
 ---
 
-```txt
+```plain
 [
   <Function SymbolTable for afuera in test>,
   <Function SymbolTable for enlasada in test>,
@@ -79,7 +79,7 @@ print(st.lookup('test').get_namespace().get_locals())
 
 ---
 
-```txt
+```plain
 [
   <symbol 'math'>,
   <symbol 'x'>,
@@ -126,7 +126,7 @@ print("no_locales dentro()", st_test.get_children()[0].get_frees())
 
 ---
 
-```txt
+```plain
 <Function SymbolTable for afuera in test>
 parametros ('x',)
 locales ('x', 'dentro', 'b')

@@ -1,4 +1,6 @@
-.reveal-viewport {
+@import 'reveal.js/dist/reveal.css';
+
+.reveal-viewport  {
 	background-color: var(--r-background-color);
 }
 
@@ -9,9 +11,6 @@
 	font-weight: normal;
 }
 
-.reveal * + pre {
-    margin-top: 1em;
-}
 .reveal section section {
     place-content: center;
     place-items: center;
@@ -120,6 +119,12 @@
 
 .reveal small * {
 	vertical-align: top;
+}
+
+.reveal ul { 
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .reveal .controls {

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 function documentation_for(module: string) {
     return `https://docs.python.org/3/library/${module}.html`;
 }
@@ -1884,56 +1886,56 @@ pprint.pprint(data)
 
 
 const selected_modules = [
-    "__future__",
-    "__main__",
-    "array",
+    // "__future__",
+    // "__main__",
+    // "array",
     "atexit",
-    "bisect",
-    "builtins",
-    "calendar",
-    "cmath",
-    "copy",
-    "collections",
-    "dis",
+    // "bisect",
+    // "builtins",
+    // "calendar",
+    // "cmath",
+    // "copy",
+    // "collections",
+    // "dis",
     "doctest",
-    "filecmp",
-    "functools",
-    "gc",
-    "getext",
-    "hashlib",
-    "html",
-    "idlelib",
+    // "filecmp",
+    // "functools",
+    // "gc",
+    // "getext",
+    // "hashlib",
+    // "html",
+    // "idlelib",
     "inspect",
-    "json",
-    "keyword",
-    "locale",
-    "lzma",
-    "modulefinder",
-    "numbers",
-    "operator",
+    // "json",
+    // "keyword",
+    // "locale",
+    // "lzma",
+    // "modulefinder",
+    // "numbers",
+    // "operator",
     "pathlib",
-    "pickle",
-    "platform",
-    "pprint",
-    "pydoc",
-    "random", // secrets
-    "sched",
+    // "pickle",
+    // "platform",
+    // "pprint",
+    // "pydoc",
+    // "random", // secrets
+    // "sched",
     "shutil",
     "sqlite3",
-    "symtable",
+    // "symtable",
     "sys",
     "tempfile",
-    "textwrap",
+    // "textwrap",
     "timeit",
-    "tomllib",
-    "trace",
-    "traceback",
-    "typing",
-    "urllib",
-    "uuid",
-    "wave",
-    "wsgiref",
-    "xml"
+    // "tomllib",
+    // "trace",
+    // "traceback",
+    // "typing",
+    // "urllib",
+    // "uuid",
+    // "wave",
+    // "wsgiref",
+    // "xml"
 ];
 
 const modules_order = [
@@ -2139,13 +2141,15 @@ const modules_order = [
     ]
 ];
 
-const flat_std_modules = Object.values(std_modules).reduce((acc, m) => {
-    for (const k in m) {
-        acc.push({ ...m[k], name: k, on_presentation: selected_modules.includes(k) });
-    }
-    return acc;
-}
-    , []);
+const flat_std_modules: (ModuleMetadata & { name: string; on_presentation: boolean; })[] = Object.values(std_modules)
+    .reduce((acc, m) => {
+        for (const k in m) {
+            // @ts-expect-error Its okay
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            acc.push({ ...m[k as any], name: k, on_presentation: selected_modules.includes(k) });
+        }
+        return acc;
+    }, []);
 
 const presented_modules = flat_std_modules.filter(m => m.on_presentation);
 const not_presented_modules = flat_std_modules.filter(m => !m.on_presentation);
@@ -2161,8 +2165,6 @@ function generate_modules_table(modules: { name: string; }[], columns: number) {
         "|   ".repeat(columns) + "|\n" + "| - ".repeat(columns) + "|\n"
     );
 }
-
-// console.log(generate_modules_table(presented_modules, 5));
 
 // const selected_letters = {
 //     a: [6, 1.8633540372670807, 2],
@@ -2191,107 +2193,7 @@ function generate_modules_table(modules: { name: string; }[], columns: number) {
 //     x: [1, 0.3105590062111801, 1],
 //     q: [2, 0.6211180124223602, 0]
 // };
-// const r = [];
-// const l = [...selected_modules].sort((a, b) => Math.random() - 0.5);
+// 
 // const letters = "lcrpijatadssbctsu_ikw_stombsphlfpgxnhcttgfupdwcptt";
-// console.log(letters.length);
-// for (let i = 0; i < 50; i++) {
-//     const letter = letters[i];
-//     for (let j = 0; j < l.length; j++) {
-//         if (l[j][0] === letter) {
-//             r.push([i+1, l[j]]);
-//             l.splice(j, 1);
-//             break;
-//         }
-//     }
-// }
-// console.log(JSON.stringify(r, null, 2));
-
-
-// function log_per_interesting_levels(modules: Record<string, Record<string, ModuleMetadata>>) {
-//     const modules_by_interesting_level: ({ name: string; } & ModuleMetadata)[] = [];
-
-//     const letter_count = {};
-//     let total = 0;
-//     let total_modules = 0;
-//     for (const letter in modules) {
-//         for (const module_name in modules[letter]) {
-//             total_modules++;
-//             const module = modules[letter][module_name];
-//             if (module.deprecated) {
-//                 continue;
-//             }
-//             if (module.pyodide_available) {
-//                 modules_by_interesting_level.push({ name: module_name, ...module });
-//             }
-//             if (!letter_count[module_name[0]]) {
-//                 letter_count[module_name[0]] = 0;
-//             }
-//             letter_count[module_name[0]]++;
-//         }
-//         total += letter_count[letter];
-//     }
-//     console.log("Total modules", total_modules);
-//     const ratio = {};
-//     for (const letter in letter_count) {
-//         ratio[letter] = [letter_count[letter], letter_count[letter] / total * 50];
-//     }
-//     // console.log(ratio);
-
-//     modules_by_interesting_level.sort((a, b) => a.interesting_level - b.interesting_level);
-//     const sorted_keys = new Set(modules_by_interesting_level.map(m => m.name[0]));
-//     const ordered_ratio = {};
-//     for (const letter of sorted_keys) {
-//         ordered_ratio[letter] = ratio[letter];
-//     }
-//     console.log(ordered_ratio);
-//     modules_by_interesting_level.splice(42);
-
-//     const letters = modules_by_interesting_level.map(m => m.name[0]).reduce((acc, letter) => {
-//         if (!acc[letter]) {
-//             acc[letter] = 0;
-//         }
-//         acc[letter]++;
-//         return acc;
-//     }
-//         , {});
-//     const msg_letters = "Namespaces are one honking great idea lets do more of those".toLowerCase().split("").reduce((acc, letter) => {
-//         if (!acc[letter]) {
-//             acc[letter] = 0;
-//         }
-//         acc[letter]++;
-//         return acc;
-//     }
-//         , {});
-//     for (const letter in msg_letters) {
-//         console.log(letter, letters[letter], letter_count[letter], msg_letters[letter]);
-//     }
-
-//     // const letter_count = {};
-//     // for (const module of modules_by_interesting_level) {
-//     //     if (!letter_count[module.]) {
-//     //         letter_count[module.interesting_level] = 0;
-//     //     }
-//     //     letter_count[module.interesting_level]++;
-//     // }
-//     console.log(letters);
-//     let m = "";
-//     for (const [k, v] of Object.entries(letters)) {
-//         for (let i = 0; i < v; i++) {
-//             m += k;
-//         }
-//     }
-//     console.log(m.split("").sort((x, y) => Math.random() - 0.5).join(""));
-//     // for (const module of modules_by_interesting_level) {
-//     //     console.log(module.interesting_level, module);
-//     // }
-// }
-
-// log_per_interesting_levels(std_modules);
-
-
-// console.log(selected_modules.map(m => m[0]).toSorted(_ => Math.random() - 0.5).join(""));
-// console.log(selected_modules.length);
-// console.log(Object.values(selected_letters).reduce((acc, [_, __, v]) => acc + v, 0));
 
 export { };

@@ -1,3 +1,6 @@
+
+--- animate
+
 ```py
 import sqlite3
 ```
@@ -40,7 +43,7 @@ cur.execute("CREATE TABLE chiki (nombre TEXT, edad INTEGER)")
 print(cur.execute("SELECT name FROM sqlite_master").fetchone())
 ```
 
-```txt
+```plain
 ('chiki',)
 ```
 
@@ -70,7 +73,7 @@ con.commit()
 print(cur.execute("SELECT * FROM chiki WHERE edad >= 50").fetchall())
 ```
 
-```txt
+```plain
 [('Guido van Rossum', 68), ('Raymond Hettinger', 50)]
 ```
 
@@ -143,7 +146,7 @@ cur.execute("INSERT INTO temp VALUES (', en otros terminos, no persistente')")
 print("".join(*cur.execute("SELECT * FROM temp").fetchall()))
 ```
 
-```txt
+```plain
 Solo en memoria, en otros terminos, no persistente
 ```
 
@@ -223,7 +226,6 @@ con sqlite3.Error agarramos cualquier error de SQLite
 
 --- animate
 
-
 ```sh
 con sqlite3.Error agarramos cualquier error de SQLite
 ```
@@ -248,7 +250,7 @@ import sqlite3
 print(*("sqlite3" + name for name in dir(sqlite3) if "Error" in name))
 ```
 
-```txt
+```plain
 sqlite3.DataError sqlite3.DatabaseError sqlite3.Error sqlite3.IntegrityError
 sqlite3.InterfaceError sqlite3.InternalError sqlite3.NotSupportedError
 sqlite3.OperationalError sqlite3.ProgrammingErro
