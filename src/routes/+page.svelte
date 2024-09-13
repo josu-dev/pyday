@@ -11,7 +11,7 @@
   <Slide class="h-full place-items-center place-content-center gap-16">
     <h1>Participaciones de Josudev en<br />PyDay La Plata</h1>
     <ol class="flex flex-col gap-4 text-start">
-      <li><a href="/2024">2023 (lighting talk)</a></li>
+      <li><a href="/2024">2023 (lightning talk)</a></li>
       <li><a href="/2024" class="no-underline">2024</a></li>
     </ol>
   </Slide>

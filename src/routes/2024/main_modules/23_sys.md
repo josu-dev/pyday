@@ -7,7 +7,11 @@ import sys
 
 --- animate
 
-El modulo `sys{:py}` provee acceso a algunas variables usadas o mantenidas por el interprete y a funciones para interactuar con este
+```py
+import sys
+```
+
+Acceso a variables usadas/mantenidas por el interprete y funciones para interactuar con este
 
 --- animate
 
@@ -34,8 +38,8 @@ print(sys.argv)
 ```
 
 ```sh
-$ python xd.py $HOME "otro argumento"
-['xd.py', 'C:\\Users\\suare', 'otro argumento']
+python xd.py $HOME "argumento 2"
+['xd.py', 'C:\\Users\\suare', 'argumento 2']
 ```
 
 --- animate
@@ -48,7 +52,7 @@ import sys
 print(sys.orig_argv)
 ```
 
---- animate
+--- animate class="text-3xl"
 
 Veamos algunas
 
@@ -59,10 +63,10 @@ print(sys.orig_argv)
 ```
 
 ```sh
-$ python xd.py $HOME "otro argumento"
+python xd.py $HOME "argumento 2"
 [
   'C:\\Users\\suare\\.pyenv\\pyenv-win\\versions\\3.12.1\\python.exe',
-  'xd.py', 'C:\\Users\\suare', 'otro argumento'
+  'xd.py', 'C:\\Users\\suare', 'argumento 2'
 ]
 ```
 
@@ -87,7 +91,7 @@ print(sys.byteorder)
 ```
 
 ```sh
-$ python xd.py
+python xd.py
 little
 ```
 
@@ -102,7 +106,7 @@ little
 
 </div>
 
-<div >
+<div>
 
 ![Little Endian](/2024/little_endian.svg)
 
@@ -121,7 +125,7 @@ print(len(sys.stdlib_module_names))
 print(len(sys.modules))
 ```
 
---- animate
+--- animate class="text-3xl"
 
 Veamos algunas
 
@@ -246,7 +250,7 @@ print(sys.getsizeof(x))
 print(sys.getrefcount(x))
 ```
 
---- animate
+--- animate class="text-3xl"
 
 Veamos algunas
 
@@ -254,7 +258,7 @@ Veamos algunas
 import sys
 
 x = 1
-y = [x, 2 , 3]
+y = [x, 2, 3]
 z = {'x': x, 'y': y}
 
 print(sys.getsizeof(x))
@@ -274,7 +278,7 @@ Veamos algunas
 import sys
 
 x = 1
-y = [x, 2 , 3]
+y = [x, 2, 3]
 z = {'x': x, 'y': y}
 
 print(sys.getrefcount(y))

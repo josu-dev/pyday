@@ -7,13 +7,17 @@ import shutil
 
 --- animate
 
-El modulo `shutil` provee una forma simple de manipular archivos y directorios.
+```py
+import shutil
+```
+
+Utilidades simples para manipular archivos y directorios
 
 --- animate
 
-El modulo `shutil` provee una forma simple de manipular archivos y directorios.
+Utilidades simples para manipular archivos y directorios
 
-Mas comoda que usar `os` y `os.path`
+Mas comodas que usar `os{:py}` y `os.path{:py}`
 
 --- animate
 
@@ -23,11 +27,11 @@ Simples?
 
 Simples?
 
-como?
+Como?
 
 --- animate
 
-asi
+Asi
 
 ```py
 import shutil
@@ -44,12 +48,12 @@ shutil.copy('test.py', 'test2.py')
 ```
 
 ```sh
-$ ls
+ls
 no_tengo_cosas tengo_cosas test.py
 
-$ python test.py
+python test.py
 
-$ ls
+ls
 no_tengo_cosas tengo_cosas test.py test2.py
 ```
 
@@ -57,10 +61,12 @@ no_tengo_cosas tengo_cosas test.py test2.py
 
 A hay cosas ahi?
 
---- animate
+--- animate class="text-4xl"
+
+A hay cosas ahi?
 
 ```sh
-$ tree
+tree
 .
 ├─test.py
 ├─test2.py
@@ -71,19 +77,13 @@ $ tree
 └─tengo_cosas
 ```
 
----
+--- animate
 
 Arreglemos eso
 
 --- animate
 
-```py
-import shutil
-
-shutil.copytree('tengo_cosas', 'no_tengo_cosas')
-```
-
---- animate
+Arreglemos eso
 
 ```py
 import shutil
@@ -91,9 +91,11 @@ import shutil
 shutil.copytree('tengo_cosas', 'no_tengo_cosas', dirs_exist_ok=True)
 ```
 
+--- animate class="text-3xl"
+
 ```sh
-$ python test.py
-$ tree
+python test.py
+tree
 .
 ├─test.py
 ├─test2.py
@@ -107,12 +109,30 @@ $ tree
     └─yo_tampoco.md
 ```
 
----
+--- animate class="text-3xl"
+
+```sh
+python test.py
+tree
+.
+├─test.py
+├─test2.py
+├─no_tengo_cosas
+│ ├─estoy_vacio
+│ └─no_estoy
+│   └─yo_tampoco.md
+└─tengo_cosas
+  ├─estoy_vacio
+  └─no_estoy
+    └─yo_tampoco.md
+```
 
 Uh lo duplicamos
 
 --- animate
 
+Solucionado
+
 ```py
 import shutil
 
@@ -121,15 +141,9 @@ shutil.rmtree('no_tengo_cosas')
 
 --- animate
 
-```py
-import shutil
-
-shutil.rmtree('no_tengo_cosas')
-```
-
 ```sh
-$ python test.py
-$ tree
+python test.py
+tree
 .
 ├─test.py
 ├─test2.py
@@ -139,11 +153,13 @@ $ tree
     └─yo_tampoco.md
 ```
 
----
+--- animate
 
-para pero hay muchos archivos
+Para para para, pero hay muchos archivos
 
 --- animate
+
+Para para para, pero hay muchos archivos
 
 ```py
 import shutil
@@ -155,7 +171,7 @@ shutil.make_archive('comprimido', 'zip', 'comprimido')
 shutil.rmtree('comprimido')
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 import shutil
@@ -168,8 +184,8 @@ shutil.rmtree('comprimido')
 ```
 
 ```sh
-$ python test.py
-$ tree
+python test.py
+tree
 .
 └─comprimido.zip
 ```
@@ -180,9 +196,11 @@ Ahora si
 
 --- animate
 
-Me pregunto donde esta tree
+Me pregunto donde esta el comando `tree{:sh}`
 
 --- animate
+
+Me pregunto donde esta el comando `tree{:sh}`
 
 ```py
 import shutil
@@ -199,14 +217,14 @@ shutil.which('tree')
 ```
 
 ```sh
-$ python test.py
+python test.py
 C:\Windows\system32\tree.COM
 ```
 
 --- animate
 
 ```sh
-$ python test.py
+python test.py
 C:\Windows\system32\tree.COM
 ```
 

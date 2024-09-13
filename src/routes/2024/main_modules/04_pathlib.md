@@ -92,7 +92,7 @@ print(pathlib.Path.cwd())
 ---
 
 ```plain
-C:\Users\suare\projects\personal\pyday1\2024
+C:\Users\suare\projects\personal\pyday
 ```
 
 ---

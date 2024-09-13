@@ -1,13 +1,13 @@
 
 --- animate
 
-Bueno esos fueron algunos modulos
+Esos fueron algunos modulos
 
 --- animate
 
-Bueno esos fueron algunos modulos
+Esos fueron algunos modulos
 
-De 201 modulos listados en la documentacion de Python 3.12.6
+De **201** modulos listados en la documentacion de Python 3.12.6
 
 ---
 
@@ -22,10 +22,6 @@ Solo vimos **9**
 | [`import atexit{:py}`](https://docs.python.org/3/library/atexit.html)   | [`import doctest{:py}`](https://docs.python.org/3/library/doctest.html)   | [`import inspect{:py}`](https://docs.python.org/3/library/inspect.html) |
 | [`import pathlib{:py}`](https://docs.python.org/3/library/pathlib.html) | [`import shutil{:py}`](https://docs.python.org/3/library/shutil.html)     | [`import sqlite3{:py}`](https://docs.python.org/3/library/sqlite3.html) |
 | [`import sys{:py}`](https://docs.python.org/3/library/sys.html)         | [`import tempfile{:py}`](https://docs.python.org/3/library/tempfile.html) | [`import timeit{:py}`](https://docs.python.org/3/library/timeit.html)   |
-
----
-
-Faltaron
 
 --- class="[&_table]:text-lg [&_a]:no-underline gap-4"
 

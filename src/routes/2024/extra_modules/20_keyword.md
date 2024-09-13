@@ -52,7 +52,7 @@ Una soft keyword es un identificador que tiene un significado especial bajo cier
 
 Las soft keywords son: `match, case, type y _{:py}`
 
-_`type{:py}` se añadió en python 3.12_
+_`type{:py}` se añadio en python 3.12_
 
 --- animate
 

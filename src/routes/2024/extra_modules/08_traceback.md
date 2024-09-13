@@ -34,7 +34,7 @@ KeyboardInterrupt
 
 Y eso de `traza de pila` es lo que se conoce como TraceStack
 
-Es la lista de llamadas (a funciones) que se hicieron hasta llegar al momento de la excepción
+Es la lista de llamadas (a funciones) que se hicieron hasta llegar al momento de la excepcion
 
 ---
 

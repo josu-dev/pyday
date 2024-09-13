@@ -4,11 +4,11 @@ import math
 
 --- animate
 
-El modulo `math{:py}` provee acceso a las funciones matemáticas definidas por el estándar C.
+El modulo `math{:py}` provee acceso a las funciones matematicas definidas por el estandar C.
 
 --- animate
 
-El modulo `math{:py}` provee acceso a las funciones matemáticas definidas por el estándar C.
+El modulo `math{:py}` provee acceso a las funciones matematicas definidas por el estandar C.
 
 (Operaciones, constantes y funciones trigonometricas)
 

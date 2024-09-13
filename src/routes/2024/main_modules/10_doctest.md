@@ -1,19 +1,24 @@
+
+--- animate
+
 ```py
 import doctest
 ```
 
----
-
-El modulo `doctest` permite validar que los ejemplos en las docstring de un modulo den el resultado esperado
-
---- class="text-2xl"
+--- animate
 
 ```py
-# mi_modulo.py
+import doctest
+```
+
+Validar ejemplos en las docstrings de un modulo, tal que representen la implementacion
+
+--- animate class="text-2xl"
+
+```py
 def baskara(a, b, c):
     """
     Calcula las raices de una ecuacion cuadratica
-
     >>> baskara(1, 0, -1)
     (1.0, -1.0)
     >>> baskara(1, 0, 1)
@@ -31,13 +36,13 @@ if __name__ == "__main__":
     doctest.testmod()
 ```
 
----
+--- animate
 
-```plain
+```sh
 python mi_modulo.py
 ```
 
----
+--- animate
 
 ```plain
 
@@ -59,7 +64,7 @@ Y el resultado?
 
 Si el resultado esta bien, no se imprime nada
 
-Sino, se imprimen los fallos
+Sino, se imprime el reporte de errores
 
 --- animate
 
@@ -73,7 +78,7 @@ Para ver que esta pasando, podemos usar el flag `-v`
 python mi_modulo.py -v
 ```
 
---- animate
+--- animate class="text-2xl"
 
 ```sh
 python mi_modulo.py -v
@@ -101,12 +106,11 @@ ok
 Test passed.
 ```
 
----
+--- animate class="text-2xl"
 
-O podemos agarrar un modulo y correr los tests
+O podemos correr los tests de un modulo
 
 ```py
-# counter.py
 """
 >>> count_letters("me leiste")
 {'m': 1, 'e': 3, 'l': 1, 'i': 1, 's': 1, 't': 1}
@@ -115,8 +119,7 @@ import collections
 import string
 
 def count_letters(text: str):
-    """
-    >>> count_letters("hola")
+    """>>> count_letters("hola")
     {'h': 1, 'o': 1, 'l': 1, 'a': 1}
     >>> count_letters(43)
     Traceback (most recent call last):
@@ -133,7 +136,7 @@ def count_letters(text: str):
 python -m doctest counter.py
 ```
 
----
+--- class="text-xl"
 
 ```plain
 **********************************************************************
@@ -160,8 +163,6 @@ Got:
 ***Test Failed*** 1 failures.
 ```
 
---- animate
-
 Uh, no paso el test
 
 --- animate
@@ -170,8 +171,9 @@ Uh, no paso el test
 
 Falto validar que el argumento sea un string
 
+--- animate class="text-2xl"
+
 ```py
-# counter.py
 """
 >>> count_letters("me leiste")
 {'m': 1, 'e': 3, 'l': 1, 'i': 1, 's': 1, 't': 1}
@@ -180,15 +182,14 @@ import collections
 import string
 
 def count_letters(text: str):
-    """
-    >>> count_letters("hola")
+    """>>> count_letters("hola")
     {'h': 1, 'o': 1, 'l': 1, 'a': 1}
     >>> count_letters(43)
     Traceback (most recent call last):
         ...
     ValueError: text must be a string
     """
-    if not isinstance(text, str):  # type: ignore
+    if not isinstance(text, str):
         raise ValueError("text must be a string")
 
     normalized_text = "".join(c for c in text.lower() if c in string.ascii_lowercase)
@@ -211,6 +212,10 @@ python -m doctest counter.py
 
 `doctest{:py}` prima la exactitud
 
+--- animate
+
+`doctest{:py}` prima la exactitud
+
 Hay casos donde no es lo que queremos, ya que el resultado esta simplificado
 
 --- animate
@@ -221,10 +226,11 @@ Hay casos donde no es lo que queremos, ya que el resultado esta simplificado
 
 Para eso podemos usar flags
 
----
+--- animate class="text-3xl"
+
+Para eso podemos usar flags
 
 ```py
-# test.py
 def numeros():
     """
     >>> numeros()
@@ -241,7 +247,7 @@ if __name__ == "__main__":
 ---
 
 ```sh
-python test.py
+python numeros.py
 ```
 
 ---
@@ -255,18 +261,22 @@ python test.py
 O como modulo
 
 ```sh
-python -m doctest -o ELLIPSIS -o NORMALIZE_WHITESPACE test.py
+python -m doctest -o ELLIPSIS -o NORMALIZE_WHITESPACE numeros.py
 ```
 
 --- animate
 
-Tambien podemos extraer un script desde los ejemplos
+Podemos extraer un script desde los ejemplos
+
+--- animate class="text-3xl"
+
+Podemos extraer un script desde los ejemplos
 
 ```py
 import doctest
 
 print(doctest.script_from_examples(r"""
-    Este es un ejemplo de como se puede usar doctest para probar un modulo.
+    Este es un ejemplo sencillo.
     >>> def suma(a, b):
     ...     return a + b
     >>> suma(1, 2)
@@ -280,12 +290,12 @@ print(doctest.script_from_examples(r"""
 """))
 ```
 
---- animate
+--- animate class="text-3xl"
 
-Tambien podemos extraer un script desde los ejemplos
+Podemos extraer un script desde los ejemplos
 
 ```py
-# Este es un ejemplo de como se puede usar doctest para probar un modulo.
+# Este es un ejemplo sencillo.
 def suma(a, b):
     return a + b
 suma(1, 2)

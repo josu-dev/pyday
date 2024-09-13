@@ -1,14 +1,23 @@
+
+--- animate
+
 ```py
 import inspect
 ```
 
----
+--- animate
 
-El modulo `inspect` nos permite obtener información sobre objetos de Python, como clases, funciones, métodos, módulos, trazas de pila y código fuente.
+```py
+import inspect
+```
 
----
+Inspeccion de objetos vivos como
 
-Por ejemplo ver las funciones de un módulo:
+clases, funciones, metodos, modulos, trazas de pila, marcos y codigo fuente
+
+--- animate
+
+Ver las funciones de un modulo
 
 ```py
 import inspect
@@ -18,7 +27,7 @@ print("nativas:", *inspect.getmembers(secrets, inspect.isbuiltin), sep="\n  ")
 print("normal:", *inspect.getmembers(secrets, inspect.isfunction), sep="\n  ")
 ```
 
----
+--- animate
 
 ```plain
 nativas:
@@ -30,11 +39,13 @@ normal:
   ('token_urlsafe', <function token_urlsafe at 0x000001C26803BF60>)
 ```
 
----
+--- animate
 
 No falta la funcion `secrets.choice{:py}`?
 
----
+--- animate
+
+No falta la funcion `secrets.choice{:py}`?
 
 ```py
 import inspect
@@ -43,7 +54,14 @@ import secrets
 print("normal:", *inspect.getmembers(secrets, inspect.ismethod), sep="\n  ")
 ```
 
---- class="text-2xl"
+--- animate class="text-2xl"
+
+```py
+import inspect
+import secrets
+
+print("normal:", *inspect.getmembers(secrets, inspect.ismethod), sep="\n  ")
+```
 
 ```plain
 metodo:
@@ -51,9 +69,9 @@ metodo:
   ('randbits', <bound method SystemRandom.getrandbits of <random.SystemRandom object at 0x000001EB6ED0BE60>>)
 ```
 
----
+--- animate
 
-Para ver la documentación de un objeto:
+Ver la documentacion de un objeto
 
 ```py
 import inspect
@@ -61,7 +79,13 @@ import inspect
 print(inspect.getdoc(inspect))
 ```
 
----
+--- animate
+
+```py
+import inspect
+
+print(inspect.getdoc(inspect))
+```
 
 ```plain
 Generate cryptographically strong pseudo-random numbers suitable for
@@ -71,9 +95,9 @@ See PEP 506 for more information.
 https://peps.python.org/pep-0506/
 ```
 
----
+--- animate
 
-Para ver el código fuente de un objeto:
+Ver el codigo fuente de un objeto
 
 ```py
 import inspect
@@ -81,7 +105,7 @@ import inspect
 print(inspect.getsource(inspect.SystemRandom))
 ```
 
---- class="text-2xl"
+--- animate class="text-2xl"
 
 ```plain
 class SystemRandom(Random):
@@ -108,7 +132,7 @@ class SystemRandom(Random):
 
 ---
 
-Cuidado que los objetos nativos no se puede ver el código fuente:
+Ver el codigo fuente de una funcion
 
 ```py
 import inspect
@@ -116,7 +140,7 @@ import inspect
 print(inspect.getsource(print))
 ```
 
---- class="text-xl"
+--- animate class="text-xl"
 
 ```ansi
 [0;31mTraceback (most recent call last):
@@ -146,14 +170,18 @@ TypeError: module, class, method, function, traceback, frame, or code object
 was expected, got builtin_function_or_method[0m
 ```
 
----
+--- animate
 
-Para ver partes de una función:
+Cuidado con codigo nativo, hay cosas que no se pueden ver
+
+--- animate
+
+Ver componentes de una funcion
 
 ```py
 import inspect
 
-def BuenEjemplo(a, b: int, c: str = "hola", **kwargs) -> int:
+def BuenEjemplo(a, b: int, c: str = "algo", **kwargs) -> int:
     """Esta es un muy buen ejemplo."""
     return a + b + c
 
@@ -162,7 +190,7 @@ print(signature.parameters)
 print(signature.return_annotation)
 ```
 
---- class="text-xl"
+--- animate
 
 ```plain
 OrderedDict({

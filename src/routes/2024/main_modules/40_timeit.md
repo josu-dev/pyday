@@ -11,7 +11,7 @@ import timeit
 import timeit
 ```
 
-Medir tiempo de ejecución de pequeños fragmentos de código, de forma simple
+Medir tiempo de ejecucion de pequeños fragmentos de codigo, de forma simple
 
 --- animate
 
@@ -85,7 +85,7 @@ Algunas opciones
 
 --- animate
 
-Permite repetir la medición
+Permite repetir la medicion
 
 <nobr>
 
@@ -93,7 +93,7 @@ Permite repetir la medición
 
 --- animate
 
-Permite repetir la medición
+Permite repetir la medicion
 
 <nobr>
 
@@ -152,19 +152,19 @@ Para casos mas complejos, estan los parametros `setup{:py}` o `globals{:py}`
 
 Para casos mas complejos, estan los parametros `setup{:py}` o `globals{:py}`
 
-`setup{:py}` se ejecuta una vez antes de cada medición
+`setup{:py}` se ejecuta una vez antes de cada medicion
 
 --- animate
 
 Para casos mas complejos, estan los parametros `setup{:py}` o `globals{:py}`
 
-`setup{:py}` se ejecuta una vez antes de cada medición
+`setup{:py}` se ejecuta una vez antes de cada medicion
 
-`globals{:py}` se usa para pasar el contexto de ejecución
+`globals{:py}` se usa para pasar el contexto de ejecucion
 
 <!-- --- animate class="!text-[0.6em]"
 
-`setup{:py}` se ejecuta una vez antes de cada medición
+`setup{:py}` se ejecuta una vez antes de cada medicion
 
 ```py
 
@@ -216,7 +216,7 @@ print(timeit.timeit(stmt3, setup=setup))
 
 --- animate class="!text-[0.6em]"
 
-`globals{:py}` se usa para pasar el contexto de ejecución
+`globals{:py}` se usa para pasar el contexto de ejecucion
 
 ```py
 import timeit

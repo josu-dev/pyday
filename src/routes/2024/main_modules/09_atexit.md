@@ -1,12 +1,19 @@
+
+--- animate
+
 ```py
 import atexit
 ```
 
----
+--- animate
 
-El modulo `atexit{:py}` nos permite registrar funciones que se ejecutaran al finalizar la ejecucion del programa
+```py
+import atexit
+```
 
----
+Registrar funciones de limpieza para ejecutar cuando el programa termina
+
+--- animate
 
 ```py
 import atexit
@@ -17,33 +24,52 @@ def chau():
 atexit.register(chau)
 ```
 
----
+--- animate
 
-```plain
-termine la ejecucion papu
+```py
+import atexit
+
+def chau():
+    print("termine la ejecucion 👌")
+
+atexit.register(chau)
 ```
 
----
+```plain
+termine la ejecucion 👌
+```
 
-De que nos sirve?
+--- animate
 
----
+De que es util?
 
-Para liberar guardar logs y otras tareas de limpieza
+--- animate
 
----
+De que es util?
+
+Para guardar logs, cerrar conexiones, liberar recursos, etc
+
+--- animate
 
 Si, pero no es lo mismo que un `finally{:py}` o usar un `context manager`?
 
----
+--- animate
 
-No, `finally{:py}` o `context manager` se ejecuta siempre, `atexit{:py}` solo si el programa termina normalmente o se llama a `exit(){:py}` o `sys.exit(){:py}`
+Si, pero no es lo mismo que un `finally{:py}` o usar un `context manager`?
 
----
+No, `finally{:py}` o `context manager` se ejecutan siempre, `atexit{:py}` solo si el interprete termina normalmente o se llama a `exit(){:py}` o `sys.exit(){:py}`
 
-Tambien podemos registrar multiples funciones, se ejecutaran en orden inverso
+--- animate
 
----
+Se pueden registrar multiples funciones
+
+--- animate
+
+Se pueden registrar multiples funciones
+
+Se ejecutan en orden inverso al que se registraron
+
+--- animate
 
 ```py
 import atexit
@@ -57,7 +83,7 @@ atexit.register(segunda)
 atexit.register(otra, "tercera")
 ```
 
----
+--- animate
 
 ```plain
 tercera
@@ -74,7 +100,7 @@ Y si queremos des-registrar una funcion?
 Y si queremos des-registrar una funcion?
 
 ```py
-atexit.unregister(tu_funcion)
+atexit.unregister(<una_funcion>)
 ```
 
 --- animate

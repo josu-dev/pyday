@@ -1,27 +1,32 @@
-
 --- animate
 
 ```py
 import sqlite3
 ```
 
+---
+
+animate
+
+```py
+import sqlite3
+```
+
+Trabajar con bases de datos SQLite
+
 --- animate
 
-El modulo `sqlite3` nos permite trabajar con bases de datos SQLite.
-
---- animate
-
-El modulo `sqlite3` nos permite trabajar con bases de datos SQLite.
+Trabajar con bases de datos SQLite
 
 _locales_
 
 --- animate
 
-Simple, rápido, y fácil de usar.
+Simple, rapido, y facil de usar
 
 --- animate
 
-Simple, rápido, y fácil de usar.
+Simple, rapido, y facil de usar
 
 ```py
 import sqlite3
@@ -29,7 +34,7 @@ import sqlite3
 con = sqlite3.connect('example.db')
 cur = con.cursor()
 cur.execute("CREATE TABLE chiki (nombre TEXT, edad INTEGER)")
-print(cur.execute("SELECT name FROM sqlite_master").fetchone())
+print(cur.execute("SELECT name FROM sqlite_master").fetchall())
 ```
 
 --- animate
@@ -40,11 +45,11 @@ import sqlite3
 con = sqlite3.connect('example.db')
 cur = con.cursor()
 cur.execute("CREATE TABLE chiki (nombre TEXT, edad INTEGER)")
-print(cur.execute("SELECT name FROM sqlite_master").fetchone())
+print(cur.execute("SELECT name FROM sqlite_master").fetchall())
 ```
 
 ```plain
-('chiki',)
+[('chiki',)]
 ```
 
 --- animate
@@ -79,11 +84,11 @@ print(cur.execute("SELECT * FROM chiki WHERE edad >= 50").fetchall())
 
 --- animate
 
-No te olvides de cerrar la conexión
+No te olvides de cerrar la conexion
 
 --- animate
 
-No te olvides de cerrar la conexión
+No te olvides de cerrar la conexion
 
 ```py
 con.close()
@@ -91,7 +96,7 @@ con.close()
 
 --- animate
 
-No te olvides de cerrar la conexión
+No te olvides de cerrar la conexion
 
 ```py data-id="commit"
 con.close()
@@ -101,7 +106,7 @@ Pero tampoco te olvides de usar commit
 
 --- animate
 
-No te olvides de cerrar la conexión
+No te olvides de cerrar la conexion
 
 ```py data-id="commit"
 con.commit()
@@ -116,11 +121,11 @@ Genial, ahora ya sabes como trabajar con SQLite en Python.
 
 --- animate
 
-algo mas?
+Algo mas?
 
---- animate
+--- animate class="text-3xl"
 
-algo mas?
+Algo mas?
 
 ```py
 import sqlite3
@@ -133,7 +138,7 @@ cur.execute("INSERT INTO temp VALUES (', en otros terminos, no persistente')")
 print("".join(*cur.execute("SELECT * FROM temp").fetchall()))
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 import sqlite3
@@ -152,11 +157,11 @@ Solo en memoria, en otros terminos, no persistente
 
 --- animate
 
-algo mas?
+Algo mas?
 
 --- animate
 
-algo mas?
+Algo mas?
 
 ```py
 import sqlite3
@@ -168,7 +173,7 @@ original.close()
 nueva.close()
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 import sqlite3
@@ -186,7 +191,7 @@ Creanmen que hace el backup bien
 
 Un poco de error handling no vendria mal
 
---- animate
+--- animate class="text-3xl"
 
 Un poco de error handling no vendria mal
 
@@ -199,12 +204,12 @@ cur.execute("CREATE TABLE escribime_bien (msg TEXT)")
 try:
     cur.execute("INSERT INTO escribime_mal VALUES ('no_quiero')")
 except sqlite3.Error as e:
-    print("con sqlite3.Error agarramos cualquier error de SQLite")
+    print("capturamos un error, nose cual")
 finally:
     con.close()
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 import sqlite3
@@ -215,19 +220,19 @@ cur.execute("CREATE TABLE escribime_bien (msg TEXT)")
 try:
     cur.execute("INSERT INTO escribime_mal VALUES ('no_quiero')")
 except sqlite3.Error as e:
-    print("con sqlite3.Error agarramos cualquier error de SQLite")
+    print("capturamos un error, nose cual")
 finally:
     con.close()
 ```
 
 ```sh
-con sqlite3.Error agarramos cualquier error de SQLite
+capturamos un error, nose cual
 ```
 
 --- animate
 
 ```sh
-con sqlite3.Error agarramos cualquier error de SQLite
+capturamos un error, nose cual
 ```
 
 Tranquilos, hay mas especificos
@@ -239,15 +244,23 @@ Tranquilos, hay mas especificos
 ```py
 import sqlite3
 
-print(*("sqlite3" + name for name in dir(sqlite3) if "Error" in name))
+print(*(
+  "sqlite3" + name
+  for name in dir(sqlite3)
+  if "Error" in name
+))
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 import sqlite3
 
-print(*("sqlite3" + name for name in dir(sqlite3) if "Error" in name))
+print(*(
+  "sqlite3" + name
+  for name in dir(sqlite3)
+  if "Error" in name
+))
 ```
 
 ```plain

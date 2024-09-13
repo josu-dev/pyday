@@ -4,7 +4,7 @@ import array
 
 ---
 
-El módulo `array` proporciona una forma de crear arrays homogéneos
+El modulo `array` proporciona una forma de crear arrays homogeneos
 
 ---
 
