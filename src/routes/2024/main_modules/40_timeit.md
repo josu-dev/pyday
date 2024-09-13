@@ -320,7 +320,7 @@ Casi me olvido
 
 Tambien puede ser usado desde la terminal
 
---- animate
+--- animate class="text-3xl"
 
 Tambien puede ser usado desde la terminal
 
@@ -328,7 +328,7 @@ Tambien puede ser usado desde la terminal
 python -m timeit -s "import math; x=48; y=-1.9" "math.copysign(x, y)"
 ```
 
---- animate
+--- animate class="text-3xl"
 
 Tambien puede ser usado desde la terminal
 
@@ -337,7 +337,7 @@ python -m timeit -s "import math; x=48; y=-1.9" "math.copysign(x, y)"
 2000000 loops, best of 5: 114 nsec per loop
 ```
 
---- animate
+--- animate class="text-3xl"
 
 Tambien puede ser usado desde la terminal
 
@@ -348,7 +348,7 @@ python -m timeit -s "import math; x=48; y=-1.9" "math.copysign(x, y)"
 python -m timeit "x=48; y=-1.9" "float(x if y >= 0 else -x)"
 ```
 
---- animate
+--- animate class="text-3xl"
 
 Tambien puede ser usado desde la terminal
 

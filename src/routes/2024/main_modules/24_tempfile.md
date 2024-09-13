@@ -114,7 +114,7 @@ with tempfile.NamedTemporaryFile() as f:
 print(os.path.exists(f.name))
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 import os
@@ -159,8 +159,6 @@ with tempfile.TemporaryDirectory() as d:
 
 --- animate class="text-3xl"
 
-O algo totalmente inneceario
-
 ```py data-id="1"
 import os
 import tempfile
@@ -199,11 +197,7 @@ with tempfile.TemporaryDirectory() as d:
     ))
 ```
 
-```plain
-0
-```
-
-Como que 0?
+Como que pesa 0?
 
 --- animate class="text-3xl"
 
@@ -221,10 +215,6 @@ with tempfile.TemporaryDirectory() as d:
         for f in os.listdir(d)
         if os.path.isfile(f)
     ))
-```
-
-```plain
-0
 ```
 
 Me falto el `d/` en el `os.path.getsize(f){:py}` e `if os.path.isfile(f){:py}`

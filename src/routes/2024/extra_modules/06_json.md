@@ -4,7 +4,7 @@ import json
 
 ---
 
-El modulo `json` nos permite trabajar con datos en formato JSON.
+El modulo `json` nos permite trabajar con datos en formato JSON
 
 ---
 

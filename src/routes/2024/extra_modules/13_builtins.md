@@ -4,11 +4,11 @@ import builtins
 
 --- animate
 
-El modulo `builtins{:py}` provee acceso directo a todos los identificadores integrados en Python.
+El modulo `builtins{:py}` provee acceso directo a todos los identificadores integrados en Python
 
 --- animate
 
-El modulo `builtins{:py}` provee acceso directo a todos los identificadores integrados en Python.
+El modulo `builtins{:py}` provee acceso directo a todos los identificadores integrados en Python
 
 En español?
 

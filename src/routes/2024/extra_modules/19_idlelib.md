@@ -18,7 +18,7 @@ Y porque no un editor de texto?
 
 La diferencia es que IDLE es un IDE, es decir, un entorno de desarrollo integrado
 lo que significa que ademas de un editor de texto, tiene herramientas para facilitar la programacion
-de aplicaciones y librerias.
+de aplicaciones y librerias
 
 ---
 
@@ -60,5 +60,5 @@ Bueno, aca hay un gif de como se ve el IDLE
 
 <video controls autoplay loop muted>
   <source src="/2024/idle_demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
+  Your browser does not support the video tag
 </video>

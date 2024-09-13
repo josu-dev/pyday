@@ -15,7 +15,7 @@ Inspeccion de objetos vivos como
 
 clases, funciones, metodos, modulos, trazas de pila, marcos y codigo fuente
 
---- animate
+--- animate class="text-3xl"
 
 Ver las funciones de un modulo
 
@@ -27,7 +27,7 @@ print("nativas:", *inspect.getmembers(secrets, inspect.isbuiltin), sep="\n  ")
 print("normal:", *inspect.getmembers(secrets, inspect.isfunction), sep="\n  ")
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```plain
 nativas:
@@ -43,7 +43,7 @@ normal:
 
 No falta la funcion `secrets.choice{:py}`?
 
---- animate
+--- animate class="text-3xl"
 
 No falta la funcion `secrets.choice{:py}`?
 
@@ -79,7 +79,7 @@ import inspect
 print(inspect.getdoc(inspect))
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 import inspect
@@ -174,7 +174,7 @@ was expected, got builtin_function_or_method[0m
 
 Cuidado con codigo nativo, hay cosas que no se pueden ver
 
---- animate
+--- animate class="text-3xl"
 
 Ver componentes de una funcion
 
@@ -190,7 +190,7 @@ print(signature.parameters)
 print(signature.return_annotation)
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```plain
 OrderedDict({

@@ -4,7 +4,7 @@ import traceback
 
 ---
 
-El modulo `traceback` provee funciones para manipular excepciones y sus trazas de pila.
+El modulo `traceback` provee funciones para manipular excepciones y sus trazas de pila
 
 ---
 

@@ -93,11 +93,11 @@ Cuidado que el contenido es un string de bytes, con `f.read().decode('utf-8')` s
 
 --- animate
 
-Por defecto `urlopen` usa el metodo `GET` para hacer la peticion.
+Por defecto `urlopen` usa el metodo `GET` para hacer la peticion
 
 --- animate
 
-Por defecto `urlopen` usa el metodo `GET` para hacer la peticion.
+Por defecto `urlopen` usa el metodo `GET` para hacer la peticion
 
 Podemos usar `urllib.request.Request` para, por ejemplo, un metodo `POST`
 

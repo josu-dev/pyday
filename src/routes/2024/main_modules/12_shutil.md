@@ -39,7 +39,7 @@ import shutil
 shutil.copy('test.py', 'test2.py')
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 import shutil
@@ -61,7 +61,7 @@ no_tengo_cosas tengo_cosas test.py test2.py
 
 A hay cosas ahi?
 
---- animate class="text-4xl"
+--- animate class="text-3xl"
 
 A hay cosas ahi?
 
@@ -81,7 +81,7 @@ tree
 
 Arreglemos eso
 
---- animate
+--- animate class="text-3xl"
 
 Arreglemos eso
 

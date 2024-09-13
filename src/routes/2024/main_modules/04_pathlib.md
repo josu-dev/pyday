@@ -13,19 +13,23 @@ import pathlib
 
 Interfaz orientada a objetos para manipular rutas de archivos y directorios
 
----
+--- animate
 
 ![https://docs.python.org/3/_images/pathlib_inheritance.png](/2024/pathlib_inheritance.png)
 
----
+--- animate
+
+![https://docs.python.org/3/_images/pathlib_inheritance.png](/2024/pathlib_inheritance.png)
 
 Que dice el grafico?
 
----
+--- animate
+
+![https://docs.python.org/3/_images/pathlib_inheritance.png](/2024/pathlib_inheritance.png)
 
 Que depende de donde se ejecute el codigo, Path instanciara el objeto para el SO subyacente
 
----
+--- animate
 
 Entonces felizmente usamos Path y es cross-platform
 
@@ -110,7 +114,7 @@ with path.joinpath('.env').open() as f:
     print(f.read())
 ```
 
----
+--- class="text-3xl"
 
 ```plain
 DB_URI=postgresql://por:quemeestas@localhost:5432/leyendo

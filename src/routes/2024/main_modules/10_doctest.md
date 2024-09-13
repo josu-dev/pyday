@@ -111,8 +111,7 @@ Test passed.
 O podemos correr los tests de un modulo
 
 ```py
-"""
->>> count_letters("me leiste")
+""">>> count_letters("me leiste")
 {'m': 1, 'e': 3, 'l': 1, 'i': 1, 's': 1, 't': 1}
 """
 import collections
@@ -174,8 +173,7 @@ Falto validar que el argumento sea un string
 --- animate class="text-2xl"
 
 ```py
-"""
->>> count_letters("me leiste")
+""">>> count_letters("me leiste")
 {'m': 1, 'e': 3, 'l': 1, 'i': 1, 's': 1, 't': 1}
 """
 import collections
@@ -232,8 +230,7 @@ Para eso podemos usar flags
 
 ```py
 def numeros():
-    """
-    >>> numeros()
+    """>>> numeros()
     [1, 2, ...,        10]
     """
     return list(range(1, 11))
@@ -276,7 +273,7 @@ Podemos extraer un script desde los ejemplos
 import doctest
 
 print(doctest.script_from_examples(r"""
-    Este es un ejemplo sencillo.
+    Este es un ejemplo sencillo
     >>> def suma(a, b):
     ...     return a + b
     >>> suma(1, 2)
@@ -295,7 +292,7 @@ print(doctest.script_from_examples(r"""
 Podemos extraer un script desde los ejemplos
 
 ```py
-# Este es un ejemplo sencillo.
+# Este es un ejemplo sencillo
 def suma(a, b):
     return a + b
 suma(1, 2)

@@ -4,7 +4,7 @@ import symtable
 
 ---
 
-El modulo `symtable` permite examinar la table de simbolos de un bloque de codigo.
+El modulo `symtable` permite examinar la table de simbolos de un bloque de codigo
 
 --- animate
 

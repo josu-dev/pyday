@@ -1,12 +1,11 @@
+
 --- animate
 
 ```py
 import sqlite3
 ```
 
----
-
-animate
+--- animate
 
 ```py
 import sqlite3
@@ -52,7 +51,7 @@ print(cur.execute("SELECT name FROM sqlite_master").fetchall())
 [('chiki',)]
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 chikis = [
@@ -65,7 +64,7 @@ con.commit()
 print(cur.execute("SELECT * FROM chiki WHERE edad >= 50").fetchall())
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 chikis = [
@@ -117,7 +116,7 @@ Pero tampoco te olvides de usar commit
 
 ---
 
-Genial, ahora ya sabes como trabajar con SQLite en Python.
+Genial, ahora ya sabes como trabajar con SQLite en Python
 
 --- animate
 
