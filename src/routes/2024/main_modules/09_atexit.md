@@ -103,7 +103,7 @@ Y si queremos des-registrar una funcion?
 atexit.unregister(<una_funcion>)
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 import atexit
@@ -118,7 +118,7 @@ atexit.register(desapareci, name="tercera")
 atexit.unregister(desapareci)
 ```
 
---- animate
+--- animate class="text-3xl"
 
 ```py
 import atexit

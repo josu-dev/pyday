@@ -53,6 +53,10 @@
 	}
 
 	function start_timer() {
+    if (!damage) {
+      return;
+    }
+
 		_damage.enabled = damage;
 		time_progress.set(1);
 		visible = true;
