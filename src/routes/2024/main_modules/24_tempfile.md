@@ -7,11 +7,15 @@ import tempfile
 
 --- animate
 
-El modulo `tempfile{:py}` crea archivos y directorios temporales
+```py
+import tempfile
+```
+
+Crear archivos y directorios temporales
 
 --- animate
 
-El modulo `tempfile{:py}` crea archivos y directorios temporales
+Crear archivos y directorios temporales
 
 De que nos sirve?
 
@@ -19,18 +23,19 @@ De que nos sirve?
 
 De que nos sirve?
 
-Algunas veces estamos trabajando con grandes volumenes de datos, haciendo transformaciones, y otras cosas que no necesitamos persistir en disco
+Para trabajar con grandes volumenes de datos, haciendo transformaciones y otras operacioens que no necesitamos persistir en disco
 
 --- animate
 
-Algunas veces estamos trabajando con grandes volumenes de datos, haciendo transformaciones, y otras cosas que no necesitamos persistir en disco
+Para trabajar con grandes volumenes de datos, haciendo transformaciones y otras operacioens que no necesitamos persistir en disco
 
 Es ahi donde entra `tempfile{:py}` y nos simplifica la vida
 
 --- animate
 
+Es ahi donde entra `tempfile{:py}` y nos simplifica la vida
+
 ```py
-import os
 import tempfile
 
 with tempfile.TemporaryFile() as f:
@@ -42,7 +47,6 @@ with tempfile.TemporaryFile() as f:
 --- animate
 
 ```py
-import os
 import tempfile
 
 with tempfile.TemporaryFile() as f:
@@ -63,7 +67,39 @@ Por defecto, los archivos son abiertos en modo `w+b`
 
 Por defecto, los archivos son abiertos en modo `w+b`
 
-Exceptuando `tempfile.mkstemp{:py}` y `tempfile.mkdtemp{:py}`, todos son context managers que hacen el cierre y eliminacion del archivo/directorio automaticamente
+Con `mode=<modo apertura>{:py}` podemos cambiarlo
+
+--- animate
+
+Con las funciones
+
+`tempfile.mkstemp{:py}` se crea un archivo temporal
+
+`tempfile.mkdtemp{:py}` se crea un directorio temporal
+
+--- animate
+
+Con las funciones
+
+`tempfile.mkstemp{:py}` se crea un archivo temporal
+
+`tempfile.mkdtemp{:py}` se crea un directorio temporal
+
+Pero hay que hacer la limpieza manualmente
+
+--- animate
+
+Por lo que es mejor usar
+
+`tempfile.TemporaryFile{:py}`, `tempfile.NamedTemporaryFile{:py}` y `tempfile.TemporaryDirectory{:py}`
+
+--- animate
+
+Por lo que es mejor usar
+
+`tempfile.TemporaryFile{:py}`, `tempfile.NamedTemporaryFile{:py}` y `tempfile.TemporaryDirectory{:py}`
+
+Ya que al ser context managers, hacen el cierre y eliminacion del archivo/directorio automaticamente
 
 --- animate
 
@@ -99,11 +135,11 @@ False
 
 --- animate class="text-3xl"
 
-O algo totalmente inneceario
+Algo totalmente inneceario
 
 --- animate class="text-3xl"
 
-O algo totalmente inneceario
+Algo totalmente inneceario
 
 ```py data-id="1"
 import os
@@ -191,11 +227,9 @@ with tempfile.TemporaryDirectory() as d:
 0
 ```
 
-Ah, si, me falto el `d/` en el `os.path.getsize(f){:py}` e `if os.path.isfile(f){:py}`
+Me falto el `d/` en el `os.path.getsize(f){:py}` e `if os.path.isfile(f){:py}`
 
 --- animate class="text-3xl"
-
-Ahora si
 
 ```py data-id="1"
 import os
@@ -212,6 +246,8 @@ with tempfile.TemporaryDirectory() as d:
         if os.path.isfile(f"{d}/{f}")
     ))
 ```
+
+Ahora si
 
 --- animate class="text-3xl"
 

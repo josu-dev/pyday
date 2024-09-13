@@ -7,7 +7,7 @@ Esos fueron algunos modulos
 
 Esos fueron algunos modulos
 
-De **201** modulos listados en la documentacion de Python 3.12.6
+de **201** modulos listados en la documentacion de Python 3.12.6
 
 ---
 
