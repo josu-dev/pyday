@@ -66,3 +66,19 @@
     </div>
   </Slide>
 </Presentation>
+
+<div class="hidden text-lg text-xl text-2xl text-3xl
+grid grid-cols-2 gap-8 scale-150"></div>
+
+<style>
+  :global {
+    .table-text-lg table {
+      font-size: var(--font-size-lg, 1.125rem /* 18px */);
+      line-height: var(--font-size-lg--line-height, 1.75rem /* 28px */);
+    }
+    .table-text-2xl table {
+      font-size: var(--font-size-2xl, 1.5rem /* 24px */);
+      line-height: var(--font-size-2xl--line-height, 2rem /* 32px */);
+    }
+  }
+</style>

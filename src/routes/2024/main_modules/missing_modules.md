@@ -13,7 +13,7 @@ de **201** modulos listados en la documentacion de Python 3.12.6
 
 Para que se den una idea
 
---- class="[&_table]:text-2xl [&_a]:no-underline gap-4"
+--- class="table-text-2xl gap-4"
 
 Solo vimos **9**
 
@@ -23,7 +23,7 @@ Solo vimos **9**
 | [`import pathlib{:py}`](https://docs.python.org/3/library/pathlib.html) | [`import shutil{:py}`](https://docs.python.org/3/library/shutil.html)     | [`import sqlite3{:py}`](https://docs.python.org/3/library/sqlite3.html) |
 | [`import sys{:py}`](https://docs.python.org/3/library/sys.html)         | [`import tempfile{:py}`](https://docs.python.org/3/library/tempfile.html) | [`import timeit{:py}`](https://docs.python.org/3/library/timeit.html)   |
 
---- class="[&_table]:text-lg [&_a]:no-underline gap-4"
+--- class="table-text-lg gap-4"
 
 Faltaron **65**
 
@@ -43,7 +43,7 @@ Faltaron **65**
 | [`import fractions{:py}`](https://docs.python.org/3/library/fractions.html) | [`import ftplib{:py}`](https://docs.python.org/3/library/ftplib.html) | [`import functools{:py}`](https://docs.python.org/3/library/functools.html) | [`import gc{:py}`](https://docs.python.org/3/library/gc.html) | [`import getopt{:py}`](https://docs.python.org/3/library/getopt.html) |
 | [`import getpass{:py}`](https://docs.python.org/3/library/getpass.html) | [`import gettext{:py}`](https://docs.python.org/3/library/gettext.html) | [`import glob{:py}`](https://docs.python.org/3/library/glob.html) | [`import graphlib{:py}`](https://docs.python.org/3/library/graphlib.html) | [`import grp{:py}`](https://docs.python.org/3/library/grp.html) |
 
---- class="[&_table]:text-lg [&_a]:no-underline gap-4"
+--- class="table-text-lg gap-4"
 
 Y otros **65**
 
@@ -63,7 +63,7 @@ Y otros **65**
 | [`import quopri{:py}`](https://docs.python.org/3/library/quopri.html) | [`import random{:py}`](https://docs.python.org/3/library/random.html) | [`import re{:py}`](https://docs.python.org/3/library/re.html) | [`import readline{:py}`](https://docs.python.org/3/library/readline.html) | [`import reprlib{:py}`](https://docs.python.org/3/library/reprlib.html) |
 | [`import resource{:py}`](https://docs.python.org/3/library/resource.html) | [`import rlcompleter{:py}`](https://docs.python.org/3/library/rlcompleter.html) | [`import runpy{:py}`](https://docs.python.org/3/library/runpy.html) | [`import sched{:py}`](https://docs.python.org/3/library/sched.html) | [`import secrets{:py}`](https://docs.python.org/3/library/secrets.html) |
 
---- class="[&_table]:text-lg [&_a]:no-underline gap-4"
+--- class="table-text-lg gap-4"
 
 Y otros **61** mas
 
