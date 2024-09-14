@@ -172,10 +172,10 @@ $ python xd.py "100000000 / 0"
 ```ansi data-id="2"
 $ python xd.py "100000000 / 0"
 [0;31mTraceback (most recent call last):
-  File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 52, in <module>
+  File "C:\Users\suare\projects\personal\pyday\xd.py", line 52, in <module>
     print(calcular(sys.argv[1]))
           ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 50, in calcular
+  File "C:\Users\suare\projects\personal\pyday\xd.py", line 50, in calcular
     return calculadora[op](int(a), int(b))
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ZeroDivisionError: division by zero[0m

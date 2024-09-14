@@ -30,7 +30,7 @@ print(timeit.timeit('8 / 2 * (2 + 2)'), "segundos")
 ```
 
 ```plain
-0.014247099999920465
+0.014247099999920465 segundos
 ```
 
 --- animate
@@ -42,10 +42,10 @@ print(timeit.timeit('8 / 2 * (2 + 2)'), "segundos")
 ```
 
 ```plain
-0.014247099999920465
+0.014247099999920465 segundos
 ```
 
-_[el resultado es](https://www.youtube.com/watch?v=Me4FmtdEuIA)_
+_[resultado](https://www.youtube.com/watch?v=Me4FmtdEuIA)_
 
 --- animate
 
@@ -87,17 +87,13 @@ Algunas opciones
 
 Permite repetir la medicion
 
-<nobr>
-
-`timeit.repeat(repeat=<default 5>){:py}`</nobr>
+`timeit.repeat(repeat=<default 5>){:py}`
 
 --- animate
 
 Permite repetir la medicion
 
-<nobr>
-
-`timeit.repeat(repeat=<default 5>){:py}`</nobr>
+`timeit.repeat(repeat=<default 5>){:py}`
 
 Util para acercarnos al lower bound
 
@@ -214,42 +210,38 @@ print(timeit.timeit(stmt3, setup=setup))
 560.2973896999993
 ``` -->
 
---- animate class="!text-[0.6em]"
+--- animate class="text-3xl"
 
 `globals{:py}` se usa para pasar el contexto de ejecucion
 
 ```py
 import timeit
 
-s1 = "sum(map(ord, s))"
-s2 = """\
-x = 0
-for c in s:
+msj = 'un caso de prueba' * 100
+s1 = 'sum(map(ord, msj))'
+s2 = '''x = 0
+for c in msj:
     x += ord(c)
-"""
-s3 = "sum(s.encode('utf-8'))"
-
-s = 'un caso de prueba' * 100
+'''
+s3 = 'sum(msj.encode("utf-8"))'
 
 print(timeit.timeit(s1, globals=globals()))
 print(timeit.timeit(s2, globals=globals()))
 print(timeit.timeit(s3, globals=globals()))
 ```
 
---- animate class="!text-[0.6em]"
+--- animate class="text-3xl"
 
 ```py
 import timeit
 
-s1 = "sum(map(ord, s))"
-s2 = """\
-x = 0
-for c in s:
+msj = 'un caso de prueba' * 100
+s1 = 'sum(map(ord, msj))'
+s2 = '''x = 0
+for c in msj:
     x += ord(c)
-"""
-s3 = "sum(s.encode('utf-8'))"
-
-s = 'un caso de prueba' * 100
+'''
+s3 = 'sum(msj.encode("utf-8"))'
 
 print(timeit.timeit(s1, globals=globals()))
 print(timeit.timeit(s2, globals=globals()))
@@ -272,36 +264,34 @@ Hay una mas rapida?
 
 Mirando bien el escenario a medir
 
---- animate class="!text-[0.75em]"
+--- animate class="text-3xl"
 
 Mirando bien el escenario a medir
 
 ```py
 import timeit
 
+msj = 'un caso de prueba' * 100
 s4 = """\
-slice_len = len(s) // 100
-slice = s[:slice_len].encode('utf-8')
+slice_len = len(msj) // 100
+slice = msj[:slice_len].encode('utf-8')
 sum(slice) * 100
 """
-
-s = 'un caso de prueba' * 100
 
 print(timeit.timeit(s4, globals=globals()))
 ```
 
---- animate class="!text-[0.75em]"
+--- animate class="text-3xl"
 
 ```py
 import timeit
 
+msj = 'un caso de prueba' * 100
 s4 = """\
-slice_len = len(s) // 100
-slice = s[:slice_len].encode('utf-8')
+slice_len = len(msj) // 100
+slice = msj[:slice_len].encode('utf-8')
 sum(slice) * 100
 """
-
-s = 'un caso de prueba' * 100
 
 print(timeit.timeit(s4, globals=globals()))
 ```
@@ -345,7 +335,7 @@ Tambien puede ser usado desde la terminal
 python -m timeit -s "import math; x=48; y=-1.9" "math.copysign(x, y)"
 2000000 loops, best of 5: 114 nsec per loop
 
-python -m timeit "x=48; y=-1.9" "float(x if y >= 0 else -x)"
+python -m timeit "x = 48; y = -1.9" "x * 1.0 if y > 0 else -1.0 * x"
 ```
 
 --- animate class="text-3xl"

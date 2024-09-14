@@ -1,11 +1,12 @@
-
 --- animate
 
 ```py
 import __main__
 ```
 
---- animate
+---
+
+animate
 
 El modulo `__main__{:py}` es especial
 
@@ -137,9 +138,9 @@ $ python main.py y
 ```ansi data-id="4"
 $ python main.py y
 [0;31mTraceback (most recent call last):
-  File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 35, in <module>
+  File "C:\Users\suare\projects\personal\pyday\xd.py", line 35, in <module>
     utils.adivinar()
-  File "C:\Users\suare\projects\personal\pyday1\2024\utils.py", line 8, in adivinar
+  File "C:\Users\suare\projects\personal\pyday\utils.py", line 8, in adivinar
     print(__main__.x)
           ^^^^^^^^^^
 AttributeError: module '__main__' has no attribute 'x'[0m

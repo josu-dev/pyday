@@ -133,13 +133,13 @@ True
 False
 ```
 
+--- animate
+
+Algo totalmente innecesario
+
 --- animate class="text-3xl"
 
-Algo totalmente inneceario
-
---- animate class="text-3xl"
-
-Algo totalmente inneceario
+Algo totalmente innecesario
 
 ```py data-id="1"
 import os

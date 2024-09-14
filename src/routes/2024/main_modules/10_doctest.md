@@ -139,20 +139,20 @@ python -m doctest counter.py
 
 ```plain
 **********************************************************************
-File "C:\Users\suare\projects\personal\pyday1\2024\counter.py", line 15, in counter.count_letters
+File "C:\Users\suare\projects\personal\pyday\counter.py", line 15, in counter.count_letters
 Failed example:
     count_letters(43)
 Expected:
     Traceback (most recent call last):
         ...
-    TypeError: argument should be a string
+    ValueError: text must be a string
 Got:
     Traceback (most recent call last):
       File "C:\Users\suare\.pyenv\pyenv-win\versions\3.12.1\Lib\doctest.py", line 1359, in __run
         exec(compile(example.source, filename, "single",
       File "<doctest counter.count_letters[1]>", line 1, in <module>
         count_letters(43)
-      File "C:\Users\suare\projects\personal\pyday1\2024\counter.py", line 20, in count_letters
+      File "C:\Users\suare\projects\personal\pyday\counter.py", line 20, in count_letters
         normalized_text = "".join(c for c in text.lower() if c in string.ascii_lowercase)
                                              ^^^^^^^^^^
     AttributeError: 'int' object has no attribute 'lower'

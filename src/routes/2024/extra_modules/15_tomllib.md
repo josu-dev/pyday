@@ -82,7 +82,7 @@ with open('settings.toml') as f:
 
 ```plain
 Traceback (most recent call last):
-  File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 23, in <module>
+  File "C:\Users\suare\projects\personal\pyday\xd.py", line 23, in <module>
     print(tomllib.load(f))
           ^^^^^^^^^^^^^^^
   File "C:\Users\suare\.pyenv\pyenv-win\versions\3.12.1\Lib\tomllib\_parser.py", line 63, in load
@@ -94,7 +94,7 @@ TypeError: File must be opened in binary mode, e.g. use `open('foo.toml', 'rb')`
 
 ```plain
 Traceback (most recent call last):
-  File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 23, in <module>
+  File "C:\Users\suare\projects\personal\pyday\xd.py", line 23, in <module>
     print(tomllib.load(f))
           ^^^^^^^^^^^^^^^
   File "C:\Users\suare\.pyenv\pyenv-win\versions\3.12.1\Lib\tomllib\_parser.py", line 63, in load

@@ -14,7 +14,7 @@ Las exepciones son lo que ves en la terminal cuando te pones triste
 
 ```plain
 Traceback (most recent call last):
-  File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 47, in <module>
+  File "C:\Users\suare\projects\personal\pyday\xd.py", line 47, in <module>
     print(f"List time: {timeit.timeit(lambda: list_seq.count(14), number=1_000_000)}")
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\suare\.pyenv\pyenv-win\versions\3.12.1\Lib\timeit.py", line 237, in timeit
@@ -24,7 +24,7 @@ Traceback (most recent call last):
     timing = self.inner(it, self.timer)
              ^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "<timeit-src>", line 6, in inner
-  File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 47, in <lambda>
+  File "C:\Users\suare\projects\personal\pyday\xd.py", line 47, in <lambda>
     print(f"List time: {timeit.timeit(lambda: list_seq.count(14), number=1_000_000)}")
                                               ^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
@@ -56,11 +56,11 @@ funcion_hiper_segura(funcion_que_puede_explotar)
 
 ```plain
 Traceback (most recent call last):
-  File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 26, in <module>
+  File "C:\Users\suare\projects\personal\pyday\xd.py", line 26, in <module>
     funcion_hiper_segura(funcion_que_puede_explotar)
-  File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 18, in funcion_hiper_segura
+  File "C:\Users\suare\projects\personal\pyday\xd.py", line 18, in funcion_hiper_segura
     ups()
-  File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 24, in funcion_que_puede_explotar
+  File "C:\Users\suare\projects\personal\pyday\xd.py", line 24, in funcion_que_puede_explotar
     int("el numero catorce")
 ValueError: invalid literal for int() with base 10: 'el numero catorce'
 ```
@@ -95,10 +95,10 @@ afuera()
 ---
 
 ```plain
-C:\Users\suare\projects\personal\pyday1\2024\xd.py | 28 | <module> | afuera()
-C:\Users\suare\projects\personal\pyday1\2024\xd.py | 26 | afuera | dentro()
-C:\Users\suare\projects\personal\pyday1\2024\xd.py | 25 | dentro | afuera_fuera()
-C:\Users\suare\projects\personal\pyday1\2024\xd.py | 20 | afuera_fuera | for values in traceback.extract_stack():
+C:\Users\suare\projects\personal\pyday\xd.py | 28 | <module> | afuera()
+C:\Users\suare\projects\personal\pyday\xd.py | 26 | afuera | dentro()
+C:\Users\suare\projects\personal\pyday\xd.py | 25 | dentro | afuera_fuera()
+C:\Users\suare\projects\personal\pyday\xd.py | 20 | afuera_fuera | for values in traceback.extract_stack():
 ```
 
 Se pueden acceder por las propiedades del objeto tambien

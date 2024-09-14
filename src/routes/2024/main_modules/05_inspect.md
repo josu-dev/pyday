@@ -1,11 +1,12 @@
-
 --- animate
 
 ```py
 import inspect
 ```
 
---- animate
+---
+
+animate
 
 ```py
 import inspect
@@ -144,7 +145,7 @@ print(inspect.getsource(print))
 
 ```ansi
 [0;31mTraceback (most recent call last):
-  File "C:\Users\suare\projects\personal\pyday1\2024\xd.py", line 25, in <module>
+  File "C:\Users\suare\projects\personal\pyday\xd.py", line 25, in <module>
     print(inspect.getsource(print))
           ^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\suare\.pyenv\pyenv-win\versions\3.12.1\Lib\inspect.py",

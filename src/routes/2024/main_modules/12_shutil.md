@@ -88,7 +88,7 @@ Arreglemos eso
 ```py
 import shutil
 
-shutil.copytree('tengo_cosas', 'no_tengo_cosas', dirs_exist_ok=True)
+shutil.copytree('no_tengo_cosas', 'tengo_cosas', dirs_exist_ok=True)
 ```
 
 --- animate class="text-3xl"

@@ -12,7 +12,7 @@
     <h1>Participaciones de Josudev en<br />PyDay La Plata</h1>
     <ol class="flex flex-col gap-4 text-start">
       <li><a href="/2023">2023 (lightning talk)</a></li>
-      <li><a href="/2024" class="no-underline">2024</a></li>
+      <li><a href="/2024">2024</a></li>
     </ol>
   </Slide>
 </Presentation>
