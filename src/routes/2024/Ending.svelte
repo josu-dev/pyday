@@ -5,7 +5,7 @@
 <section>
   <Slide>
     <p>Espero haber despertado su curiosidad</p>
-    <p>y que se animen a explorar la <a href="https://docs.python.org/3/py-modindex.html">Libreria Estandard</a></p>
+    <p>y que se animen a explorar la <a href="https://docs.python.org/3/py-modindex.html">Libreria Estandar</a></p>
   </Slide>
   <Slide animate>
     <p>O al menos</p>

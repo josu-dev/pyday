@@ -163,7 +163,7 @@ import sys
 print(sys.path)
 ```
 
-Es la lista de directorios donde Python busca modulos, prepopulada con la variable de entorno `PYTHONPATH` y un por defecto que depende del sistema
+Es la lista de directorios donde Python busca modulos, prepopulada con la variable de entorno `PYTHONPATH` y un por defecto que depende del sistema subyacente
 
 --- animate
 

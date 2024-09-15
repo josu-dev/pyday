@@ -1,11 +1,12 @@
-
 --- animate
 
 ```py
 import sqlite3
 ```
 
---- animate
+---
+
+animate
 
 ```py
 import sqlite3
@@ -184,7 +185,7 @@ original.close()
 nueva.close()
 ```
 
-Creanmen que hace el backup bien
+Creanme que hace el backup bien
 
 --- animate
 
@@ -203,7 +204,7 @@ cur.execute("CREATE TABLE escribime_bien (msg TEXT)")
 try:
     cur.execute("INSERT INTO escribime_mal VALUES ('no_quiero')")
 except sqlite3.Error as e:
-    print("capturamos un error, nose cual")
+    print("capturamos un error, no se cual")
 finally:
     con.close()
 ```
@@ -219,19 +220,19 @@ cur.execute("CREATE TABLE escribime_bien (msg TEXT)")
 try:
     cur.execute("INSERT INTO escribime_mal VALUES ('no_quiero')")
 except sqlite3.Error as e:
-    print("capturamos un error, nose cual")
+    print("capturamos un error, no se cual")
 finally:
     con.close()
 ```
 
 ```sh
-capturamos un error, nose cual
+capturamos un error, no se cual
 ```
 
 --- animate
 
 ```sh
-capturamos un error, nose cual
+capturamos un error, no se cual
 ```
 
 Tranquilos, hay mas especificos

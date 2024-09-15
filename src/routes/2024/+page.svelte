@@ -1,6 +1,7 @@
 <script lang="ts">
   import Color from '$lib/components/Color.svelte';
   import DeadlinedSlides from '$lib/components/DeadlinedSlides.svelte';
+  import HomeLink from '$lib/components/HomeLink.svelte';
   import Presentation from '$lib/components/reveal/Presentation.svelte';
   import Slide from '$lib/components/reveal/Slide.svelte';
   import Ending from './Ending.svelte';
@@ -15,6 +16,7 @@
 
 <Presentation options={{ history: true, autoAnimateDuration: 0.5 }}>
   <Slide>
+    <HomeLink />
     <p class="font-medium">Esperando <span class="inline-block animate-bounce">🐍</span></p>
   </Slide>
 
@@ -67,8 +69,10 @@
   </Slide>
 </Presentation>
 
-<div class="hidden text-lg text-xl text-2xl text-3xl
-grid grid-cols-2 gap-8 scale-150"></div>
+<div
+  class="hidden text-lg text-xl text-2xl text-3xl
+grid grid-cols-2 gap-8 scale-150"
+></div>
 
 <style>
   :global {

@@ -23,11 +23,11 @@ De que nos sirve?
 
 De que nos sirve?
 
-Para trabajar con grandes volumenes de datos, haciendo transformaciones y otras operacioens que no necesitamos persistir en disco
+Para trabajar con grandes volumenes de datos, haciendo transformaciones y otras operaciones que no necesitamos persistir en disco
 
 --- animate
 
-Para trabajar con grandes volumenes de datos, haciendo transformaciones y otras operacioens que no necesitamos persistir en disco
+Para trabajar con grandes volumenes de datos, haciendo transformaciones y otras operaciones que no necesitamos persistir en disco
 
 Es ahi donde entra `tempfile{:py}` y nos simplifica la vida
 
@@ -67,7 +67,7 @@ Por defecto, los archivos son abiertos en modo `w+b`
 
 Por defecto, los archivos son abiertos en modo `w+b`
 
-Con `mode=<modo apertura>{:py}` podemos cambiarlo
+Con `mode=<modo apertura>{:py}` se puede cambiar
 
 --- animate
 

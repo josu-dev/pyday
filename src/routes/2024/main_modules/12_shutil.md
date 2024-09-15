@@ -59,11 +59,11 @@ no_tengo_cosas tengo_cosas test.py test2.py
 
 --- animate
 
-A hay cosas ahi?
+Ah, hay cosas ahi?
 
 --- animate class="text-3xl"
 
-A hay cosas ahi?
+Ah, hay cosas ahi?
 
 ```sh
 tree
@@ -228,17 +228,17 @@ python test.py
 C:\Windows\system32\tree.COM
 ```
 
-A mira, esta en system32
+Ah mira, esta en system32
 
 --- animate
 
-A mira, esta en system32
+Ah mira, esta en system32
 
 Mejor dejemos de jugar
 
 --- animate
 
-A mira, esta en system32
+Ah mira, esta en system32
 
 Mejor dejemos de jugar
 

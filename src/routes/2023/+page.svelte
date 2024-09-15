@@ -1,5 +1,6 @@
 <script lang="ts">
   import Color from '$lib/components/Color.svelte';
+  import HomeLink from '$lib/components/HomeLink.svelte';
   import Presentation from '$lib/components/reveal/Presentation.svelte';
   import Slide from '$lib/components/reveal/Slide.svelte';
   import Fact1 from './_/Fact1.svelte';
@@ -18,6 +19,7 @@
   class="lightning-2023"
 >
   <Slide>
+    <HomeLink />
     <h1 class="text-8xl font-bold">Datos de <Color>COLOR</Color></h1>
   </Slide>
 
