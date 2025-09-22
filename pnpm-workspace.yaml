@@ -1,7 +1,7 @@
+packages:
+  - .
 onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
   - esbuild
   - sharp
   - svelte-preprocess
-
-packages:
-  - .
