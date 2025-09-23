@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@shikijs/rehype": "^1.29.2",
-    "@sveltejs/adapter-auto": "^6.1.0",
+    "@sveltejs/adapter-vercel": "^5.10.2",
     "@sveltejs/enhanced-img": "^0.3.10",
     "@sveltejs/kit": "^2.43.1",
     "@sveltejs/vite-plugin-svelte": "^6.2.0",
