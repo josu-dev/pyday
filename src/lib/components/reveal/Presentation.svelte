@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { RevealConfig } from 'reveal.js';
   import type { Snippet } from 'svelte';
   import { set_rjs_ctx } from './utils';
 
@@ -8,9 +9,9 @@
   };
 
   type Props = {
-    [key: string]: any;
+    [key: string]: unknown;
     children?: Snippet;
-    options?: Reveal.Options & Options;
+    options?: RevealConfig & Options;
     class?: string;
   };
 
@@ -20,12 +21,12 @@
 
   async function initialize_rjs() {
     const Reveal = (await import('reveal.js')).default;
-    const Markdown = (await import('reveal.js/plugin/markdown/markdown')).default;
-    const Highlight = (await import('reveal.js/plugin/highlight/highlight')).default;
-    const Math = (await import('reveal.js/plugin/math/math')).default;
-    const Notes = (await import('reveal.js/plugin/notes/notes')).default;
+    const Markdown = (await import('reveal.js/plugin/markdown')).default;
+    const Highlight = (await import('reveal.js/plugin/highlight')).default;
+    const Math = (await import('reveal.js/plugin/math')).default;
+    const Notes = (await import('reveal.js/plugin/notes')).default;
 
-    const defaults: Reveal.Options = {
+    const defaults: RevealConfig = {
       // presentation size respecting aspect ratio
       width: 960,
       height: 700,
@@ -129,7 +130,7 @@
 
       const highlight = instance.getPlugin('highlight');
       document.querySelectorAll('code').forEach((block) => {
-        // @ts-expect-error
+        // @ts-expect-error -- Reveal's plugin API does not expose plugin-specific methods.
         highlight.highlightBlock(block);
       });
     });

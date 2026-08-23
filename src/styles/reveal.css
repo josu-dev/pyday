@@ -1,4 +1,4 @@
-@import 'reveal.js/dist/reveal.css';
+@import 'reveal.js/reveal.css';
 
 .reveal-viewport  {
 	background-color: var(--r-background-color);
